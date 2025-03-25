@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.145.0">
-    <meta name="generator" content="Relearn 7.5.0+e2a1704c3c230050d3777be3bae36285a7fa0d8e">
+    <meta name="generator" content="Relearn 7.6.0">
     <meta name="description" content="Find out how t&#39; configure an&#39; cust&#39;mize yer ship.
 Ship ManagementGet yourself familiar wit&#39; th&#39; general structure o&#39; yer website">
     <meta name="author" content="Sören Weber">
@@ -33,18 +33,18 @@ Ship ManagementGet yourself familiar wit&#39; th&#39; general structure o&#39; y
     <link href="https://mcshelby.github.io/hugo-theme-relearn/pir/configuration/index.html" rel="alternate" hreflang="art-x-pir">
     <link href="https://mcshelby.github.io/hugo-theme-relearn/pir/configuration/index.html" rel="canonical" type="text/html" title="Configurrrat&#39;n :: Cap&#39;n Hugo Relearrrn Theme">
     <link href="/hugo-theme-relearn/pir/configuration/index.xml" rel="alternate" type="application/rss+xml" title="Configurrrat&#39;n :: Cap&#39;n Hugo Relearrrn Theme">
-    <link href="/hugo-theme-relearn/images/logo.svg?1742565043" rel="icon" type="image/svg+xml">
-    <link href="/hugo-theme-relearn/fonts/fontawesome/css/fontawesome-all.min.css?1742565043" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/fonts/fontawesome/css/fontawesome-all.min.css?1742565043" rel="stylesheet"></noscript>
-    <link href="/hugo-theme-relearn/css/perfect-scrollbar/perfect-scrollbar.min.css?1742565043" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/theme.min.css?1742565043" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/format-print.min.css?1742565043" rel="stylesheet" id="R-format-style">
-    <link href="/hugo-theme-relearn/css/auto-complete/auto-complete.min.css?1742565043" rel="stylesheet">
-    <script src="/hugo-theme-relearn/js/auto-complete/auto-complete.min.js?1742565043" defer></script>
-    <script src="/hugo-theme-relearn/js/lunr/lunr.min.js?1742565043" defer></script>
-    <script src="/hugo-theme-relearn/js/lunr/lunr.stemmer.support.min.js?1742565043" defer></script>
-    <script src="/hugo-theme-relearn/js/lunr/lunr.multi.min.js?1742565043" defer></script>
-    <script src="/hugo-theme-relearn/js/lunr/lunr.en.min.js?1742565043" defer></script>
-    <script src="/hugo-theme-relearn/js/search.min.js?1742565043" defer></script>
+    <link href="/hugo-theme-relearn/images/logo.svg?1742942864" rel="icon" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/fonts/fontawesome/css/fontawesome-all.min.css?1742942864" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/fonts/fontawesome/css/fontawesome-all.min.css?1742942864" rel="stylesheet"></noscript>
+    <link href="/hugo-theme-relearn/css/perfect-scrollbar/perfect-scrollbar.min.css?1742942864" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/theme.min.css?1742942864" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/format-print.min.css?1742942864" rel="stylesheet" id="R-format-style">
+    <link href="/hugo-theme-relearn/css/auto-complete/auto-complete.min.css?1742942864" rel="stylesheet">
+    <script src="/hugo-theme-relearn/js/auto-complete/auto-complete.min.js?1742942864" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.min.js?1742942864" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.stemmer.support.min.js?1742942864" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.multi.min.js?1742942864" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.en.min.js?1742942864" defer></script>
+    <script src="/hugo-theme-relearn/js/search.min.js?1742942864" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -54,17 +54,21 @@ Ship ManagementGet yourself familiar wit&#39; th&#39; general structure o&#39; y
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='https:\/\/mcshelby.github.io\/hugo-theme-relearn';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/hugo-theme-relearn/searchindex.pir.js?1742565043";
+      window.relearn.index_js_url="/hugo-theme-relearn/searchindex.pir.js?1742942864";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=true;
       window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
       // variant stuff
       window.relearn.themevariants = [ 'relearn-auto', 'relearn-dark', 'relearn-light', 'relearn-bright', 'zen-auto', 'zen-dark', 'zen-light', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ];
       window.relearn.customvariantname = "my-custom-variant";
       window.relearn.changeVariant = function(variant) {
         var oldVariant = document.documentElement.dataset.rThemeVariant;
-        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
         document.documentElement.dataset.rThemeVariant = variant;
         if (oldVariant != variant) {
           document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
@@ -72,15 +76,15 @@ Ship ManagementGet yourself familiar wit&#39; th&#39; general structure o&#39; y
         }
       }
       window.relearn.markVariant = function() {
-        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
         document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
       }
       window.relearn.initVariant = function() {
-        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
         if( variant == window.relearn.customvariantname ){
         }else if( !variant || !window.relearn.themevariants.includes(variant) ){
           variant = window.relearn.themevariants[0];
-          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
         }
         document.documentElement.dataset.rThemeVariant = variant;
       }
@@ -96,7 +100,7 @@ Ship ManagementGet yourself familiar wit&#39; th&#39; general structure o&#39; y
       window.T_No_results_found = `No rrresults found fer "{0}"`;
       window.T_N_results_found = `{1} rrresults found fer "{0}"`;
     </script>
-    <script src="/hugo-theme-relearn/js/variant.min.js?1742565043"></script>
+    <script src="/hugo-theme-relearn/js/variant.min.js?1742942864"></script>
     <style>
        
       #R-body img.bg-white {
@@ -226,6 +230,7 @@ Ship ManagementGet yourself familiar wit&#39; th&#39; general structure o&#39; y
   <h2 class="children-title" id="versioning"><a href="/hugo-theme-relearn/pir/configuration/sitemanagement/versioning/index.html">Version'n</a></h2><p>How t' keep older versions o' yer ship</p>
   <h2 class="children-title" id="meta-information"><a href="/hugo-theme-relearn/pir/configuration/sitemanagement/meta/index.html">Meta Informat'n</a></h2><p>What site-wide meta informat'n can be set</p>
   <h2 class="children-title" id="deployment-scenarios"><a href="/hugo-theme-relearn/pir/configuration/sitemanagement/deployment/index.html">Deployment Scenarios</a></h2><p>Opt'ns fer specific deployment needs</p>
+  <h2 class="children-title" id="stored-information"><a href="/hugo-theme-relearn/pir/configuration/sitemanagement/storedinformation/index.html">Stored Informat'n</a></h2><p>Informat'n on what&#39;s stored on th' reader&#39;s side</p>
   <h2 class="children-title" id="available-output-formats"><a href="/hugo-theme-relearn/pir/configuration/sitemanagement/outputformats/index.html">Avail'ble Output Formats</a></h2><p>What formats can a plank be displayed 'n</p>
   <h2 class="children-title" id="stable-output"><a href="/hugo-theme-relearn/pir/configuration/sitemanagement/stableoutput/index.html">Stable Output</a></h2><p>How t' make yer generated HTML output stable</p>
 </div>
@@ -249,19 +254,35 @@ Ship ManagementGet yourself familiar wit&#39; th&#39; general structure o&#39; y
 <h1 id="directory-structure">Directory Structure</h1>
 
 <p>If you&rsquo;ve followed th' <a href="/hugo-theme-relearn/pir/introduction/quickstart/index.html">Gett'n Started</a> guide, yer directory layout will look similar t' this:</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">├── rrrambl'n
-</span></span><span class="line"><span class="cl">│   ├── log
-</span></span><span class="line"><span class="cl">│   │   ├── first-day
-</span></span><span class="line"><span class="cl">|   |   |   └── _index.md
-</span></span><span class="line"><span class="cl">│   │   ├── second-day
-</span></span><span class="line"><span class="cl">|   |   |   └── index.md
-</span></span><span class="line"><span class="cl">│   │   ├── third-day.md
-</span></span><span class="line"><span class="cl">│   │   └── _index.md
-</span></span><span class="line"><span class="cl">│   └── _index.md
-</span></span><span class="line"><span class="cl">├── themes
-</span></span><span class="line"><span class="cl">│   └── hugo-theme-relearn
-</span></span><span class="line"><span class="cl">│       └── ...
-</span></span><span class="line"><span class="cl">└── hugo.toml</span></span></code></pre></div>
+
+<div class="list-tree"><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>rrrambl'n</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>log</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>first-day</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>second-day</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>third-day.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>themes</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>hugo-theme-relearn</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>&hellip;</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-file-alt cstyle accent"></i><span>hugo.toml</span></li>
+</ul>
+</div>
 <p>Cap'n Hugo uses a <a href="https://gohugo.io/getting-started/directory-structure/#union-file-system" rel="external" target="_self">union file system</a>, which lets ye combine multiple directories.</p>
 <p>By default, it puts yer root directory on top o' th' Relearrrn theme directory. Files 'n yer root directory will replace theme files 'n th' same locat'n.</p>
 <p>For example, if ye create a file at <code>layouts/partials/head'n.html</code>, it will override th' theme&rsquo;s <code>themes/hugo-theme-relearn/layouts/partials/head'n.html</code>.</p>
@@ -433,24 +454,40 @@ Ship ManagementGet yourself familiar wit&#39; th&#39; general structure o&#39; y
 </li>
 <li>
 <p>Duplicate yer rrrambl'n files an' add language codes t' their file names:</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">├── rrrambl'n
-</span></span><span class="line"><span class="cl">│   ├── log
-</span></span><span class="line"><span class="cl">│   │   ├── first-day
-</span></span><span class="line"><span class="cl">|   |   |   ├── _index.en.md
-</span></span><span class="line"><span class="cl">|   |   |   └── _index.pir.md
-</span></span><span class="line"><span class="cl">│   │   ├── second-day
-</span></span><span class="line"><span class="cl">|   |   |   ├── index.en.md
-</span></span><span class="line"><span class="cl">|   |   |   └── index.pir.md
-</span></span><span class="line"><span class="cl">│   │   ├── third-day.en.md
-</span></span><span class="line"><span class="cl">│   │   ├── third-day.pir.md
-</span></span><span class="line"><span class="cl">│   │   ├── _index.en.md
-</span></span><span class="line"><span class="cl">│   │   └── _index.pir.md
-</span></span><span class="line"><span class="cl">│   ├── _index.en.md
-</span></span><span class="line"><span class="cl">│   └── _index.pir.md
-</span></span><span class="line"><span class="cl">├── themes
-</span></span><span class="line"><span class="cl">│   └── hugo-theme-relearn
-</span></span><span class="line"><span class="cl">│       └── ...
-</span></span><span class="line"><span class="cl">└── hugo.toml</span></span></code></pre></div>
+
+<div class="list-tree"><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>rrrambl'n</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>log</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>first-day</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.en.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.pir.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>second-day</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>index.en.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>index.pir.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>third-day.en.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>third-day.pir.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.en.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.pir.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.en.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.pir.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>themes</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>hugo-theme-relearn</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>&hellip;</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-file-alt cstyle accent"></i><span>hugo.toml</span></li>
+</ul>
+</div>
 </li>
 </ol>
 <h2 id="translation-by-content-directory">Translat'n by Rrrambl'n Directory</h2>
@@ -559,29 +596,55 @@ Ship ManagementGet yourself familiar wit&#39; th&#39; general structure o&#39; y
 </li>
 <li>
 <p>Duplicate yer rrrambl'n files into separate directories named by their language code:</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">├── rrrambl'n
-</span></span><span class="line"><span class="cl">│   ├── en
-</span></span><span class="line"><span class="cl">|   │   ├── log
-</span></span><span class="line"><span class="cl">|   │   │   ├── first-day
-</span></span><span class="line"><span class="cl">|   |   |   |   └── _index.md
-</span></span><span class="line"><span class="cl">|   │   │   ├── second-day
-</span></span><span class="line"><span class="cl">|   |   |   |   └── index.md
-</span></span><span class="line"><span class="cl">|   │   │   ├── third-day.md
-</span></span><span class="line"><span class="cl">|   │   │   └── _index.md
-</span></span><span class="line"><span class="cl">|   │   └── _index.md
-</span></span><span class="line"><span class="cl">│   ├── pir
-</span></span><span class="line"><span class="cl">|   │   ├── log
-</span></span><span class="line"><span class="cl">|   │   │   ├── first-day
-</span></span><span class="line"><span class="cl">|   |   |   |   └── _index.md
-</span></span><span class="line"><span class="cl">|   │   │   ├── second-day
-</span></span><span class="line"><span class="cl">|   |   |   |   └── index.md
-</span></span><span class="line"><span class="cl">|   │   │   ├── third-day.md
-</span></span><span class="line"><span class="cl">|   │   │   └── _index.md
-</span></span><span class="line"><span class="cl">|   │   └── _index.md
-</span></span><span class="line"><span class="cl">|   ├── themes
-</span></span><span class="line"><span class="cl">|   │   └── hugo-theme-relearn
-</span></span><span class="line"><span class="cl">|   │       └── ...
-</span></span><span class="line"><span class="cl">|   └── hugo.toml</span></span></code></pre></div>
+
+<div class="list-tree"><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>rrrambl'n</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>en</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>log</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>first-day</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>second-day</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>third-day.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>pir</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>log</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>first-day</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>second-day</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>third-day.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>themes</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>hugo-theme-relearn</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>&hellip;</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-file-alt cstyle accent"></i><span>hugo.toml</span></li>
+</ul>
+</div>
 </li>
 </ol>
 <h2 id="search-settings">Search Sett'ns</h2>
@@ -942,7 +1005,7 @@ Ship ManagementGet yourself familiar wit&#39; th&#39; general structure o&#39; y
 <li><code>version</code> must be an <code>identifier</code> o' one o' th' entries 'n th' <code>versions</code> array</li>
 <li>ye be not limited wit' th' <code>baseURL</code>; these can be absolute or relative t' yer server root, can also reside 'n sub-subdirectories or be subdomains</li>
 <li>ye can generate yer archived versions into a sub-directory o' th' current version (as wit' this example)</li>
-<li>if ye generate yer archived versions into a sub-directory take care 'n yer workflow not t' delete old archived versions dur'n release o' th' current version</li>
+<li>if ye generate yer archived versions into a sub-directory take care 'n yer workflow not t' delete older archived versions dur'n build</li>
 <li>th' example does not take version control systems into account (like git or subversion) as such a workflow be highly subjective</li>
 <li>both sites be completely independent autonomous Cap'n Hugo sites; if ye want t' test this setup locally, ye will need two runn'n Hugo servers</li>
 <li>if ye want t' test this locally, ye will need t' adept th' top level <code>baseURL</code> parameter as well as th' <code>baseURL</code> parameter 'n th' <code>versions</code> array t' yer local setup; best be t' have <a href="https://gohugo.io/configuration/introduction/#configuration-directory" rel="external" target="_self">preconfigured environment configs</a> avail'ble</li>
@@ -1379,7 +1442,7 @@ Ship ManagementGet yourself familiar wit&#39; th&#39; general structure o&#39; y
   </div>
 </div>
 <h2 id="hiding-the-versioning-warning">Hid'n th' Version'n Arrr</h2>
-<p><span class="badge cstyle cyan badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-gears"></i></span><span class="badge-content">Opt'n</span></span> If visitors navigate t' an old version o' yer ship, they will see a version'n warning at th' top o' each plank.</p>
+<p><span class="badge cstyle cyan badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-gears"></i></span><span class="badge-content">Opt'n</span></span> If visitors navigate t' an archived version o' yer ship, they will see a version'n warning at th' top o' each plank.</p>
 <p>Ye can dis'ble it be sett'n th' <code>disableVersioningWarn'n</code> opt'n t' <code>true</code> 'n yer <code>hugo.toml</code>.</p>
 <div class="tab-panel" data-tab-group="config-code">
   <div class="tab-nav">
@@ -1438,7 +1501,7 @@ Ship ManagementGet yourself familiar wit&#39; th&#39; general structure o&#39; y
 </div>
 <h2 id="adjusting-the-versioning-warning">Adjust'n th' Version'n Arrr</h2>
 <h3 id="method-1">Method 1</h3>
-<p>Ye can adjust th' text o' th' version warning by overrid'n th' key <code>Versioning-warning</code> 'n yer i18n files.</p>
+<p>Ye can adjust th' text o' th' version'n warning by overrid'n th' key <code>Versioning-warning</code> 'n yer i18n files.</p>
 <p>Th' follow'n parameter be avail'ble t' be included 'n th' text:</p>
 <ul>
 <li><code>pageVersion</code> - th' element o' th' displayed page&rsquo;s version from yer <code>versions</code> array</li>
@@ -1990,6 +2053,46 @@ Ship ManagementGet yourself familiar wit&#39; th&#39; general structure o&#39; y
   <i class="fa-fw fas fa-layer-group"></i>
   <ul>
     <li><a class="term-link" href="/hugo-theme-relearn/pir/categories/howto/index.html">Howto</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="stored-information">Stored Information</h1>
+
+<p>Th' theme will store informat'n 'n th' reader&rsquo;s browser. It be considered t' fall under th' except'n clause 'n <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02002L0058-20091219#id-8b90d9c9-eb09-44f5-a58d-51d9cb3a50cd" rel="external" target="_self">DIRECTIVE 2002/58/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL, Art. 5(3)</a>.</p>
+<blockquote>
+<p>This shall not prevent any technical storage or access fer th' sole purpose o' carry'n out th' transmission o' a communicat'n over an electronic communicat'ns network, or as strictly necessary 'n order fer th' provider o' an informat'n society service explicitly requested by th' subscriber or user t' provide th' service.</p></blockquote>
+<p>Th' theme stores th' follow'n informat'n 'n localstorage or sessionstorage.</p>
+<ul>
+<li>
+<p>Currently applic'ble search term t' carry over t' th' follow'n presented planks. This will be used t' mark th' search term 'n th' page&rsquo;s text.</p>
+<p>This can be turned off by <a href="/hugo-theme-relearn/pir/configuration/sidebar/search/index.html#configure-search">disabl'n search</a>.</p>
+</li>
+<li>
+<p><a href="/hugo-theme-relearn/pir/shortcodes/tabs/index.html#behavior-of-the-groupid">Selected tab</a> o' a tab group t' apply th' select'n t' other tab groups on th' present plank an' all follow'n presented planks.</p>
+<p>This can not be turned off.</p>
+</li>
+<li>
+<p>Visited planks t' show a check mark 'n th' menu if th' plank was previously visited.</p>
+<p>This can be turned off by <a href="/hugo-theme-relearn/pir/configuration/sidebar/headerfooter/index.html#history">disabl'n th' history</a>.</p>
+</li>
+<li>
+<p>Th' selected theme variant t' carry over t' th' follow'n presented planks.</p>
+<p>This can be turned off by only hav'n <a href="/hugo-theme-relearn/pir/configuration/branding/colors/index.html#single-variant">one theme variant configured</a>.</p>
+</li>
+</ul>
+<p>Th' theme be not respons'ble fer stored informat'n o' third-party-scripts (every library stored 'n subdirectories o' <code>assets/js/</code>).</p>
+ 
+
+  <footer class="footline">
+<div class="R-taxonomy taxonomy-categories cstyle" title="Categorrries" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/pir/categories/explanation/index.html">Explanation</a></li>
   </ul>
 </div>
   </footer>
@@ -2712,13 +2815,13 @@ Ship ManagementGet yourself familiar wit&#39; th&#39; general structure o&#39; y
 <p>If ye want t' adjust yer favicon accord'n t' yer OS sett'ns fer light/dark mode, add th' image files <code>assets/images/favicon-light.svg</code> an' <code>assets/images/favicon-dark.svg</code> t' yer site&rsquo;s directory, respectively, correspond'n t' yer file format. In case some o' th' files be miss'n, th' theme falls back t' <code>favicon.svg</code> fer each miss'n file. All supplied favicons must be o' th' same file format.</p>
 <p>If no favicon file be found, th' theme will look up th' alternative filename <code>logo</code> 'n th' same locat'n an' will repeat th' search fer th' list o' supported file types.</p>
 <p>If ye need t' change this default behavior, create a new file <code>layouts/partials/favicon.html</code> 'n yer site&rsquo;s directory an' write someth'n like this:</p>
-<div class="tab-panel" data-tab-group="bd0967839477ba63b8fa92b64b69d021">
+<div class="tab-panel" data-tab-group="2cf51014150c25b159643e9e5b02e1a0">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialsfaviconhtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('bd0967839477ba63b8fa92b64b69d021','layoutspartialsfaviconhtml')"
+      onclick="switchTab('2cf51014150c25b159643e9e5b02e1a0','layoutspartialsfaviconhtml')"
     >
       <span class="tab-nav-text">layouts/partials/favicon.html</span>
     </button>
@@ -2748,13 +2851,13 @@ Ship ManagementGet yourself familiar wit&#39; th&#39; general structure o&#39; y
 </details>
 <h3 id="example">Example</h3>
 <p>Suppose you&rsquo;ve stored yer logo as <code>static/images/logo.png</code> then yer <code>layouts/partials/logo.html</code> could look someth'n like this:</p>
-<div class="tab-panel" data-tab-group="5858204f361945ec2e30e2ec1e7fcb74">
+<div class="tab-panel" data-tab-group="fe193140e38afea7ad2c57f917665dd8">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialslogohtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('5858204f361945ec2e30e2ec1e7fcb74','layoutspartialslogohtml')"
+      onclick="switchTab('fe193140e38afea7ad2c57f917665dd8','layoutspartialslogohtml')"
     >
       <span class="tab-nav-text">layouts/partials/logo.html</span>
     </button>
@@ -2947,6 +3050,16 @@ Ship ManagementGet yourself familiar wit&#39; th&#39; general structure o&#39; y
 </div>
 <p>Th' first variant be th' default, an' a selector will appear if there&rsquo;s more than one.</p>
 <p>If ye want t' have more control, whar' th' variant switcher be positioned or ye want t' configure a different ay'con, see th' <a href="/hugo-theme-relearn/pir/configuration/sidebar/menus/index.html#defining-sidebar-menus">chapter on sidebar configurat'n</a>.</p>
+
+<details open class=" box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Avast
+  </summary>
+  <div class="box-content">
+<p>Th' selected theme variant will be <a href="/hugo-theme-relearn/pir/configuration/sitemanagement/storedinformation/index.html">stored 'n th' reader&rsquo;s browser</a>.</p>
+  </div>
+</details>
 <h4 id="adjust-to-os-settings">Adjust t' OS Sett'ns</h4>
 <p>Use th' <code>auto</code> value t' match OS light/dark sett'ns. Usually it makes sense t' set it 'n th' first posit'n an' make it th' default.</p>
 <div class="tab-panel" data-tab-group="config-code">
@@ -3398,13 +3511,13 @@ Ship ManagementGet yourself familiar wit&#39; th&#39; general structure o&#39; y
 <p>Create an' import</p>
 <p>Ye can create a new variant file 'n th' site&rsquo;s <code>assets/css</code> directory an' give it a new name. Import th' shipped variant, add th' sett'ns ye want t' change an' save th' new file. Afterwards, ye can use it 'n yer <code>hugo.toml</code> by th' chosen name.</p>
 <p>For example, ye want t' use th' <code>relearn-light</code> variant but want t' change th' rules highlight'n schema t' th' one used 'n th' <code>neon</code> variant. For that, create a new <code>assets/css/theme-my-brand'n.css</code> 'n yer site&rsquo;s directory an' add th' follow'n lines:</p>
-<div class="tab-panel" data-tab-group="d0989d7b565b680a7a442b100858c62b">
+<div class="tab-panel" data-tab-group="aba6dcea5a7f441152e126717593d0ba">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="assetscsstheme-my-brandingcss"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('d0989d7b565b680a7a442b100858c62b','assetscsstheme-my-brandingcss')"
+      onclick="switchTab('aba6dcea5a7f441152e126717593d0ba','assetscsstheme-my-brandingcss')"
     >
       <span class="tab-nav-text">assets/css/theme-my-brand'n.css</span>
     </button>
@@ -3492,13 +3605,13 @@ Ship ManagementGet yourself familiar wit&#39; th&#39; general structure o&#39; y
 </ul>
 <h3 id="react-to-variant-switches-in-javascript">React t' Variant Switches 'n JavaScript</h3>
 <p>Once a color variant be fully boarded, either initially or by switch'n th' color variant manually wit' th' variant selector, th' custom event <code>themeVariantLoaded</code> on th' <code>document</code> will be dispatched. Ye can add an event listener an' react t' changes.</p>
-<div class="tab-panel" data-tab-group="347c31f87c63da8bb15b4486c75d0530">
+<div class="tab-panel" data-tab-group="62351b9ff0b43e89f9c700551ce8fc4b">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="javascript"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('347c31f87c63da8bb15b4486c75d0530','javascript')"
+      onclick="switchTab('62351b9ff0b43e89f9c700551ce8fc4b','javascript')"
     >
       <span class="tab-nav-text">JavaScript</span>
     </button>
@@ -3596,13 +3709,13 @@ Ship ManagementGet yourself familiar wit&#39; th&#39; general structure o&#39; y
 <p>Ye can use one o' th' shipped stylesheet files or use Cap'n Hugo t' generate a file fer ye.</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo gen chromastyles --style<span class="o">=</span>monokai &gt; chroma-mycode.css</span></span></code></pre></div>
 <p>Th' file must be written t' <code>assets/css/chroma-&lt;NAME&gt;.css</code>. T' use it wit' yer color variant, ye have t' modify <code>--CODE-theme: &lt;NAME&gt;</code> 'n th' color variant stylesheet file.</p>
-<div class="tab-panel" data-tab-group="bf81e1e76c28ebb9d69f3ff3976f254b">
+<div class="tab-panel" data-tab-group="75746dd6bb98a8c38b85fa0c3c7b2fd8">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="assetscsstheme-my-brandingcss"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('bf81e1e76c28ebb9d69f3ff3976f254b','assetscsstheme-my-brandingcss')"
+      onclick="switchTab('75746dd6bb98a8c38b85fa0c3c7b2fd8','assetscsstheme-my-brandingcss')"
     >
       <span class="tab-nav-text">assets/css/theme-my-brand'n.css</span>
     </button>
@@ -3670,13 +3783,13 @@ Ship ManagementGet yourself familiar wit&#39; th&#39; general structure o&#39; y
 Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' change will not be reflected dynamically 'n th' plank preview.
   </div>
 </details>
-<span class="btn cstyle interactive secondary"><button onclick="window.variants&amp;&amp;variants.getStylesheet();this.blur();" type="button"><i class="fa-fw fas fa-download"></i> <span class="title">Download variant</span></button></span>
-<span class="btn cstyle interactive warning"><button onclick="window.variants&amp;&amp;variants.resetVariant();this.blur();" type="button"><i class="fa-fw fas fa-trash"></i> <span class="title">Reset variant</span></button></span>
+<span class="btn interactive  cstyle secondary"><button onclick="window.variants&amp;&amp;variants.getStylesheet();this.blur();" type="button"><i class="fa-fw fas fa-download"></i> <span class="title">Download variant</span></button></span>
+<span class="btn interactive  cstyle warning"><button onclick="window.variants&amp;&amp;variants.resetVariant();this.blur();" type="button"><i class="fa-fw fas fa-trash"></i> <span class="title">Reset variant</span></button></span>
 <div id="R-vargenerator" class="mermaid zoomable" style="background-color: var(--INTERNAL-MAIN-TEXT-color);">
 	Graph
 </div>
-<span class="btn cstyle interactive secondary"><button onclick="window.variants&amp;&amp;variants.getStylesheet();this.blur();" type="button"><i class="fa-fw fas fa-download"></i> <span class="title">Download variant</span></button></span>
-<span class="btn cstyle interactive warning"><button onclick="window.variants&amp;&amp;variants.resetVariant();this.blur();" type="button"><i class="fa-fw fas fa-trash"></i> <span class="title">Reset variant</span></button></span>
+<span class="btn interactive  cstyle secondary"><button onclick="window.variants&amp;&amp;variants.getStylesheet();this.blur();" type="button"><i class="fa-fw fas fa-download"></i> <span class="title">Download variant</span></button></span>
+<span class="btn interactive  cstyle warning"><button onclick="window.variants&amp;&amp;variants.resetVariant();this.blur();" type="button"><i class="fa-fw fas fa-trash"></i> <span class="title">Reset variant</span></button></span>
 <script>
 	window.variants && variants.generator( '#R-vargenerator' );
 </script>
@@ -3755,13 +3868,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 </table>
 <p>Ye can change th' menu width but not th' screen width breakpoints.</p>
 <p>T' adjust th' menu width, use these CSS variables. Avast that <code>--MENU-WIDTH-S</code> be fer th' mobile menu flyout on small screens.</p>
-<div class="tab-panel" data-tab-group="136d8f3a176cc6898d3432cdeeefe949">
+<div class="tab-panel" data-tab-group="c5eb0a79a757f0851376acacaf9c02cc">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialscustom-headerhtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('136d8f3a176cc6898d3432cdeeefe949','layoutspartialscustom-headerhtml')"
+      onclick="switchTab('c5eb0a79a757f0851376acacaf9c02cc','layoutspartialscustom-headerhtml')"
     >
       <span class="tab-nav-text">layouts/partials/custom-header.html</span>
     </button>
@@ -3857,8 +3970,8 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 </div>
 <h2 id="home-button-configuration">Home Button Configurat'n</h2>
 <p>By default, th' theme displays a home button between search form an' navigat'n menu. Th' Home button serves as an alternative t' click'n th' logo.</p>
-<p><a href="#R-image-60d38550184a9072c0bb917d8317a040" class="lightbox-link"><img alt="Default Home Button" class="bg-white border lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/configuration/sidebar/headerfooter/home_button_defaults.png?width=18.75rem" style=" height: auto; width: 18.75rem;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-60d38550184a9072c0bb917d8317a040"><img alt="Default Home Button" class="bg-white border lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/configuration/sidebar/headerfooter/home_button_defaults.png?width=18.75rem"></a></p>
+<p><a href="#R-image-c3ccf4a3369a6728a430b905bf48d845" class="lightbox-link"><img alt="Default Home Button" class="bg-white border lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/configuration/sidebar/headerfooter/home_button_defaults.png?width=18.75rem" style=" height: auto; width: 18.75rem;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c3ccf4a3369a6728a430b905bf48d845"><img alt="Default Home Button" class="bg-white border lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/configuration/sidebar/headerfooter/home_button_defaults.png?width=18.75rem"></a></p>
 <p><span class="badge cstyle cyan badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-gears"></i></span><span class="badge-content">Opt'n</span></span> T' hide th' Home button on th' left menu, set <code>disableLandingPageButton=true</code>.</p>
 <div class="tab-panel" data-tab-group="config-code">
   <div class="tab-nav">
@@ -4050,6 +4163,16 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 <p>For a free configurat'n o' th' header menus, see <a href="/hugo-theme-relearn/pir/configuration/sidebar/menus/index.html#defining-sidebar-menus">configurat'n o' th' sidebar menus</a>.</p>
 <h2 id="history">History</h2>
 <p><span class="badge cstyle cyan badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-gears"></i></span><span class="badge-content">Opt'n</span></span> Turn on <code>showVisitedLinks=true</code> t' see checkmarks next t' visited planks 'n th' main menu. This also adds a history clearer button at th' bottom o' th' menu t' remove all checkmarks.</p>
+
+<details open class=" box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Avast
+  </summary>
+  <div class="box-content">
+<p>Th' visited planks will be <a href="/hugo-theme-relearn/pir/configuration/sitemanagement/storedinformation/index.html">stored 'n th' reader&rsquo;s browser</a>.</p>
+  </div>
+</details>
 <p>If ye want t' have more control, whar' th' history clearer be positioned or ye want t' configure a different ay'con, see th' <a href="/hugo-theme-relearn/pir/configuration/sidebar/menus/index.html#defining-sidebar-menus">chapter on sidebar configurat'n</a>.</p>
 <p>Avast that checkmarks will disappear if ye rebuild yer ship, as th' plank IDs may change.</p>
 <div class="tab-panel" data-tab-group="config-code">
@@ -4134,6 +4257,16 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 <li>Dedicated search plank: Access'ble by click'n th' magnifier glass or press'n <kbd>ENTER</kbd></li>
 </ol>
 <p>Each level requires th' previous one t' be enabled. If no search be configured, th' search form won&rsquo;t appear.</p>
+
+<details open class=" box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Avast
+  </summary>
+  <div class="box-content">
+<p>Th' search term will be <a href="/hugo-theme-relearn/pir/configuration/sitemanagement/storedinformation/index.html">stored 'n th' reader&rsquo;s browser</a> as long as it be present.</p>
+  </div>
+</details>
 <p><span class="badge cstyle cyan badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-gears"></i></span><span class="badge-content">Opt'n</span></span> All levels be enabled by default. Dis'ble them 'n <code>hugo.toml</code>:</p>
 <ul>
 <li>In-page search: <code>disableSearch=true</code></li>
@@ -5073,13 +5206,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
   </div>
 </div>
 <p>T' change th' title, override yer translat'n file.</p>
-<div class="tab-panel" data-tab-group="ad49cddab601b3446d25e4e9c15cc57d">
+<div class="tab-panel" data-tab-group="5f17606261de396a1cf048ca016248a3">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="i18nentoml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('ad49cddab601b3446d25e4e9c15cc57d','i18nentoml')"
+      onclick="switchTab('5f17606261de396a1cf048ca016248a3','i18nentoml')"
     >
       <span class="tab-nav-text">i18n/en.toml</span>
     </button>
@@ -5213,9 +5346,10 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 <ul>
 <li><code>sidebarheadermenus</code>:
 <ul>
+<li>a divider t' separate from th' logo (depend'n on th' color configurat'n o' th' theme variant) if any o' th' follow'n be configured</li>
 <li>a home button if <a href="/hugo-theme-relearn/pir/configuration/sidebar/headerfooter/index.html#home-button-configuration">configured</a>, if ye redefine this, use a Cap'n Hugo menu an' a <code>type=menu</code> t' replicate this</li>
 <li>th' version switcher if version'n be <a href="/hugo-theme-relearn/pir/configuration/sitemanagement/versioning/index.html">configured</a></li>
-<li>a divider t' separate from th' <code>sidebarmenus</code> (depend'n on th' configurat'n o' th' theme variant)</li>
+<li>a divider t' separate from th' <code>sidebarmenus</code> (depend'n on th' color configurat'n o' th' theme variant)</li>
 </ul>
 </li>
 <li><code>sidebarmenus</code>:
@@ -5233,7 +5367,6 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 </ul>
 </li>
 </ul>
-<p>However, if ye decide t' overwrite these opt'ns, th' configurat'n fer those features will not be taken into account anymore. For example, if ye want t' reorder th' <code>sidebarfootermenus</code> by sett'n</p>
 <div class="tab-panel" data-tab-group="config-code">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
@@ -5582,18 +5715,28 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 <p>When th' user be on one o' th' log planks he should only see a plank menu contain'n all log planks, while on one o' th' ship planks she should only see a plank menu contain'n all sub planks o' th' ship section.</p>
 <p>For both sections, th' default <code>shortcuts</code> Cap'n Hugo menu should be displayed as if <a href="/hugo-theme-relearn/pir/configuration/sidebar/menus/index.html#defining-sidebar-menus">defaults menus</a> were used.</p>
 <p>Directory structure:</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">rrrambl'n
-</span></span><span class="line"><span class="cl">├── log
-</span></span><span class="line"><span class="cl">│   ├── first-day.md
-</span></span><span class="line"><span class="cl">│   ├── second-day.md
-</span></span><span class="line"><span class="cl">│   ├── third-day.md
-</span></span><span class="line"><span class="cl">│   └── _index.md
-</span></span><span class="line"><span class="cl">├── ship
-</span></span><span class="line"><span class="cl">│   ├── cargo.md
-</span></span><span class="line"><span class="cl">│   ├── midst.md
-</span></span><span class="line"><span class="cl">│   ├── upper.md
-</span></span><span class="line"><span class="cl">│   └── _index.md
-</span></span><span class="line"><span class="cl">└── _index.md</span></span></code></pre></div>
+
+<div class="list-tree"><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>rrrambl'n</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>log</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>first-day.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>second-day.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>third-day.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>ship</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>cargo.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>midst.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>upper.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+</ul>
+</div>
 <p><span class="badge cstyle cyan badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-gears"></i></span><span class="badge-content">Opt'n</span></span> <span class="badge cstyle green badge-with-title"><span class="badge-title"><i class="fa-fw fab fa-markdown"></i></span><span class="badge-content">Front Matter</span></span> Us'n <a href="https://gohugo.io/content-management/front-matter/#cascade" rel="external" target="_self">Hugo&rsquo;s cascade feature</a>, we can redefine th' menus once 'n <code>log/_index.md</code> an' <code>ship/_index.md</code> sett'n <code>sidebarmenus</code> so they will be used 'n all children planks.</p>
 <p>Sett'n th' <code>sidebarmenus</code> Front Matter will overwrite all default menus. If ye want t' display th' <code>shortcuts</code> Cap'n Hugo menu as well like 'n this example, ye have t' declare it wit' th' Front Matter as given 'n th' <a href="/hugo-theme-relearn/pir/configuration/sidebar/menus/index.html#defining-sidebar-menus">default opt'ns</a>.</p>
 <div class="tab-panel" data-tab-group="config-code">
@@ -5781,15 +5924,23 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 <h2 id="displaying-arbitrary-links-in-a-page-menu">Display'n Arbitrary Links 'n a Plank Menu</h2>
 <p>Ye may have th' need t' add arbitrary links at some point 'n yer menu that should redirect t' other planks 'n yer ship structure. These be called crosslinks.</p>
 <p>Assume th' follow'n structure</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">rrrambl'n
-</span></span><span class="line"><span class="cl">├── log
-</span></span><span class="line"><span class="cl">│   ├── first-day.md
-</span></span><span class="line"><span class="cl">│   ├── second-day.md
-</span></span><span class="line"><span class="cl">│   ├── third-day.md
-</span></span><span class="line"><span class="cl">│   └── _index.md
-</span></span><span class="line"><span class="cl">├── burning-sail-incident.md
-</span></span><span class="line"><span class="cl">├── kraken-incident.md
-</span></span><span class="line"><span class="cl">└── _index.md</span></span></code></pre></div>
+
+<div class="list-tree"><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>rrrambl'n</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>log</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>first-day.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>second-day.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>third-day.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>burning-sail-incident.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>kraken-incident.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+</ul>
+</div>
 <p>Ye now want t' add a top level menu entry that points t' <code>third-day</code> as separate <code>crows-nest-incident</code>.</p>
 <p>For that create a new plank wit' th' follow'n front matter</p>
 <div class="tab-panel" data-tab-group="config-code">
@@ -6109,13 +6260,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 <h2 id="changing-the-main-areas-maximum-width">Chang'n th' Main Area&rsquo;s Maximum Width</h2>
 <p>Th' main area has a default maximum width o' <code>80.25rem</code> fer better readability. If ye want t' change this, ye can set a CSS vari'ble</p>
 <p>For full width, use a large value like <code>1000rem</code>.</p>
-<div class="tab-panel" data-tab-group="dc27ee650c52aecec0fbe22b509ca865">
+<div class="tab-panel" data-tab-group="172503114530e2527167c6dd26bb05a5">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialscustom-headerhtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('dc27ee650c52aecec0fbe22b509ca865','layoutspartialscustom-headerhtml')"
+      onclick="switchTab('172503114530e2527167c6dd26bb05a5','layoutspartialscustom-headerhtml')"
     >
       <span class="tab-nav-text">layouts/partials/custom-header.html</span>
     </button>
@@ -7115,13 +7266,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 <ol>
 <li>
 <p>Create th' shortcode file <code>layouts/shortcodes/myshortcode.html</code> an' add th' follog'n line somewhere:</p>
-<div class="tab-panel" data-tab-group="a85db948f425366be69d4339d824f158">
+<div class="tab-panel" data-tab-group="918d416346b16475cbbff7ccfbb97eb9">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutsshortcodesmyshortcodehtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('a85db948f425366be69d4339d824f158','layoutsshortcodesmyshortcodehtml')"
+      onclick="switchTab('918d416346b16475cbbff7ccfbb97eb9','layoutsshortcodesmyshortcodehtml')"
     >
       <span class="tab-nav-text">layouts/shortcodes/myshortcode.html</span>
     </button>
@@ -7210,13 +7361,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 </li>
 <li>
 <p>Create loader file <code>layouts/partials/dependencies/myshortcode.html</code>:</p>
-<div class="tab-panel" data-tab-group="44f1ead44753d3feb714bd4a78c64a1a">
+<div class="tab-panel" data-tab-group="4ec750cf6f9f6c16d5db4a0dddfcbf46">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialsdependenciesmyshortcodehtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('44f1ead44753d3feb714bd4a78c64a1a','layoutspartialsdependenciesmyshortcodehtml')"
+      onclick="switchTab('4ec750cf6f9f6c16d5db4a0dddfcbf46','layoutspartialsdependenciesmyshortcodehtml')"
     >
       <span class="tab-nav-text">layouts/partials/dependencies/myshortcode.html</span>
     </button>
@@ -7465,13 +7616,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 </div>
 <h3 id="example">Example</h3>
 <p>Wit' this configurat'n 'n effect, th' follow'n URL</p>
-<div class="tab-panel" data-tab-group="1a81f800ff5708a893fb0e844094b31f">
+<div class="tab-panel" data-tab-group="af5a52b767883b3ded77236d18bdd80b">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="markdown"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('1a81f800ff5708a893fb0e844094b31f','markdown')"
+      onclick="switchTab('af5a52b767883b3ded77236d18bdd80b','markdown')"
     >
       <span class="tab-nav-text">Marrrkdown</span>
     </button>
@@ -7486,13 +7637,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
     </div>
   </div>
 </div><p>would result 'n</p>
-<div class="tab-panel" data-tab-group="0e0236f8847e101205143bd101474538">
+<div class="tab-panel" data-tab-group="1673a142770b641e8634e7f315911e7a">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="html"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('0e0236f8847e101205143bd101474538','html')"
+      onclick="switchTab('1673a142770b641e8634e7f315911e7a','html')"
     >
       <span class="tab-nav-text">HTML</span>
     </button>
@@ -7510,13 +7661,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 <p>If th' result'n effect value be <code>true</code> a class wit' th' effect&rsquo;s name will be added.</p>
 <p>Styles fer default effects be contained 'n th' theme. Add styles fer yer custom effects t' <code>layouts/partials/content-header.html</code>.</p>
 <p>For th' above custom effect ye could add th' follow'n style:</p>
-<div class="tab-panel" data-tab-group="a38e4b5f2c81fc47dfb7bd6ae3977504">
+<div class="tab-panel" data-tab-group="50ff7ef210f7afcda569c1d705712ddf">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialscontent-headerhtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('a38e4b5f2c81fc47dfb7bd6ae3977504','layoutspartialscontent-headerhtml')"
+      onclick="switchTab('50ff7ef210f7afcda569c1d705712ddf','layoutspartialscontent-headerhtml')"
     >
       <span class="tab-nav-text">layouts/partials/content-header.html</span>
     </button>
@@ -7769,13 +7920,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 </div>
 <h3 id="example">Example</h3>
 <p>Wit' this configurat'n 'n effect, th' follow'n URL</p>
-<div class="tab-panel" data-tab-group="4f1692d12960e1e3285cf0868ea80e0b">
+<div class="tab-panel" data-tab-group="97648b650d159aa6569c860daae92c3b">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="markdown"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('4f1692d12960e1e3285cf0868ea80e0b','markdown')"
+      onclick="switchTab('97648b650d159aa6569c860daae92c3b','markdown')"
     >
       <span class="tab-nav-text">Marrrkdown</span>
     </button>
@@ -7790,13 +7941,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
     </div>
   </div>
 </div><p>would result 'n</p>
-<div class="tab-panel" data-tab-group="3f99ae787cd9ea65806d27def13588b2">
+<div class="tab-panel" data-tab-group="bb54860985782a06e0e0378a5f272885">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="html"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('3f99ae787cd9ea65806d27def13588b2','html')"
+      onclick="switchTab('bb54860985782a06e0e0378a5f272885','html')"
     >
       <span class="tab-nav-text">HTML</span>
     </button>
@@ -7814,13 +7965,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 <p>If th' result'n effect value be <code>true</code> a class wit' th' effect&rsquo;s name will be added.</p>
 <p>Styles fer default effects be contained 'n th' theme. Add styles fer yer custom effects t' <code>layouts/partials/content-header.html</code>.</p>
 <p>For th' above custom effect ye could add th' follow'n style:</p>
-<div class="tab-panel" data-tab-group="196a2f94248cf10fc4fd5c981ffd560a">
+<div class="tab-panel" data-tab-group="c85257937e0b2d94a4abf0c624e4e572">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialscontent-headerhtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('196a2f94248cf10fc4fd5c981ffd560a','layoutspartialscontent-headerhtml')"
+      onclick="switchTab('c85257937e0b2d94a4abf0c624e4e572','layoutspartialscontent-headerhtml')"
     >
       <span class="tab-nav-text">layouts/partials/content-header.html</span>
     </button>
@@ -7857,8 +8008,8 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 <h1 id="topbarrr">Topbarrr</h1>
 
 <p>Th' theme comes wit' a reasonably configured topbar. Ye can learn how t' <a href="/hugo-theme-relearn/pir/authoring/frontmatter/topbar/index.html">configure th' defaults 'n this section</a>.</p>
-<p><a href="#R-image-3dfd19ee72dc0bbf34bd5bca2cae966c" class="lightbox-link"><img alt="topbar on mobile devices" class="bg-white border lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/configuration/customization/topbar/topbar-closed.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3dfd19ee72dc0bbf34bd5bca2cae966c"><img alt="topbar on mobile devices" class="bg-white border lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/configuration/customization/topbar/topbar-closed.png"></a></p>
+<p><a href="#R-image-157baf6c68b3e51df2cf2feb9e1c06cd" class="lightbox-link"><img alt="topbar on mobile devices" class="bg-white border lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/configuration/customization/topbar/topbar-closed.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-157baf6c68b3e51df2cf2feb9e1c06cd"><img alt="topbar on mobile devices" class="bg-white border lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/configuration/customization/topbar/topbar-closed.png"></a></p>
 <p>Nevertheless, yer requirements may differ from this configurat'n. Luckily, th' theme has ye covered as th' topbar, its buttons, an' th' functionality behind these buttons be fully configur'ble by ye.</p>
 
 <details open class=" box cstyle notices tip">
@@ -7872,8 +8023,8 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 </details>
 <h2 id="areas">Areas</h2>
 <p>Th' default configurat'n comes wit' three predefined areas that may contain an arbitrary set o' buttons.</p>
-<p><a href="#R-image-329b7c01a81fb0c1ae5f2ba9ad2ca435" class="lightbox-link"><img alt="topbar wit' default areas marked" class="bg-white border lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/configuration/customization/topbar/topbar-areas.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-329b7c01a81fb0c1ae5f2ba9ad2ca435"><img alt="topbar wit' default areas marked" class="bg-white border lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/configuration/customization/topbar/topbar-areas.png"></a></p>
+<p><a href="#R-image-582abf71064c225a8c7c9c5c00b414ba" class="lightbox-link"><img alt="topbar wit' default areas marked" class="bg-white border lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/configuration/customization/topbar/topbar-areas.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-582abf71064c225a8c7c9c5c00b414ba"><img alt="topbar wit' default areas marked" class="bg-white border lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/configuration/customization/topbar/topbar-areas.png"></a></p>
 <ul>
 <li><a href="https://github.com/McShelby/hugo-theme-relearn/blob/main/layouts/partials/topbar/area/start.html" rel="external" target="_self"><strong>start</strong></a>: shown between menu an' breadcrumb</li>
 <li><a href="https://github.com/McShelby/hugo-theme-relearn/blob/main/layouts/partials/topbar/area/end.html" rel="external" target="_self"><strong>end</strong></a>: shown on th' opposite breadcrumb side 'n comparison t' th' <em>start</em> area</li>
@@ -8191,13 +8342,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 </li>
 <li>
 <p>Create a rrrambl'n view file at <code>layouts/releasenotes/views/article.html</code></p>
-<div class="tab-panel" data-tab-group="390d31db3054b2c13b678c9ab00a1b2f">
+<div class="tab-panel" data-tab-group="cbae90f5ab4d0da940877a11ccdae457">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutsreleasenotesviewsarticlehtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('390d31db3054b2c13b678c9ab00a1b2f','layoutsreleasenotesviewsarticlehtml')"
+      onclick="switchTab('cbae90f5ab4d0da940877a11ccdae457','layoutsreleasenotesviewsarticlehtml')"
     >
       <span class="tab-nav-text">layouts/releasenotes/views/article.html</span>
     </button>
@@ -8232,13 +8383,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 </li>
 <li>
 <p><em>Optional</em>: create an archetype file at <code>archetypes/releasenotes.md</code></p>
-<div class="tab-panel" data-tab-group="6d35ec84bf16845f25ad3b304ed2a420">
+<div class="tab-panel" data-tab-group="141b6b1e955582c8a995e504d24e3a42">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="archetypesreleasenotesmd"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('6d35ec84bf16845f25ad3b304ed2a420','archetypesreleasenotesmd')"
+      onclick="switchTab('141b6b1e955582c8a995e504d24e3a42','archetypesreleasenotesmd')"
     >
       <span class="tab-nav-text">archetypes/releasenotes.md</span>
     </button>
@@ -8260,13 +8411,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 </div></li>
 <li>
 <p><em>Optional</em>: add CSS 'n th' file <code>layouts/partials/custom-header.html</code></p>
-<div class="tab-panel" data-tab-group="1c31dcbc3b25960794f9352d56f1c950">
+<div class="tab-panel" data-tab-group="74149e34975523c223ce3481d71ecf96">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialscustom-headerhtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('1c31dcbc3b25960794f9352d56f1c950','layoutspartialscustom-headerhtml')"
+      onclick="switchTab('74149e34975523c223ce3481d71ecf96','layoutspartialscustom-headerhtml')"
     >
       <span class="tab-nav-text">layouts/partials/custom-header.html</span>
     </button>
@@ -8314,13 +8465,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 <p>Move yer files <code>layouts/partials/archetypes/&lt;DESIGN&gt;/article.html</code> t' <code>layouts/&lt;DESIGN&gt;/views/article.html</code></p>
 <p>Th' files will most likely require further modificat'ns as they now receive th' plank as it context (dot <code>.</code>) instead o' th' <code>.page</code> an' <code>.content</code> parameter.</p>
 <p><strong>Old</strong>:</p>
-<div class="tab-panel" data-tab-group="6836717f523a57995a10425382865758">
+<div class="tab-panel" data-tab-group="a42061cf80d3050939e4f8e61704d32a">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialsarchetypesltdesigngtarticlehtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('6836717f523a57995a10425382865758','layoutspartialsarchetypesltdesigngtarticlehtml')"
+      onclick="switchTab('a42061cf80d3050939e4f8e61704d32a','layoutspartialsarchetypesltdesigngtarticlehtml')"
     >
       <span class="tab-nav-text">layouts/partials/archetypes/&lt;DESIGN&gt;/article.html</span>
     </button>
@@ -8350,13 +8501,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
     </div>
   </div>
 </div><p><strong>New</strong>:</p>
-<div class="tab-panel" data-tab-group="ebd3bc0c1e90ac2a82503e7677269263">
+<div class="tab-panel" data-tab-group="e46566bb9e877882f84369f60564f62d">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutsltdesigngtviewsarticlehtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('ebd3bc0c1e90ac2a82503e7677269263','layoutsltdesigngtviewsarticlehtml')"
+      onclick="switchTab('e46566bb9e877882f84369f60564f62d','layoutsltdesigngtviewsarticlehtml')"
     >
       <span class="tab-nav-text">layouts/&lt;DESIGN&gt;/views/article.html</span>
     </button>
@@ -8522,13 +8673,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 </li>
 <li>
 <p>Create a file <code>layouts/_default/baseof.email.html</code></p>
-<div class="tab-panel" data-tab-group="b3628bb40effbaab999550a089077aaa">
+<div class="tab-panel" data-tab-group="71054b3203f308cf9c67ff11300da9f2">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layouts_defaultbaseofemailhtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('b3628bb40effbaab999550a089077aaa','layouts_defaultbaseofemailhtml')"
+      onclick="switchTab('71054b3203f308cf9c67ff11300da9f2','layouts_defaultbaseofemailhtml')"
     >
       <span class="tab-nav-text">layouts/_default/baseof.email.html</span>
     </button>
@@ -8564,13 +8715,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 <li>
 <p><em>Optional</em>: create a file <code>layouts/_default/views/article.email.html</code></p>
 <p>In our case, we want t' display a disclaimer 'n front o' every article. T' do this we have t' define th' output o' an article ourself an' rely on th' above <code>block</code> statement t' call our template.</p>
-<div class="tab-panel" data-tab-group="1c09deed1db84e111cebb8127d4497f2">
+<div class="tab-panel" data-tab-group="e940093cd26c15a4ac6c5c27893f012f">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layouts_defaultviewsarticleemailhtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('1c09deed1db84e111cebb8127d4497f2','layouts_defaultviewsarticleemailhtml')"
+      onclick="switchTab('e940093cd26c15a4ac6c5c27893f012f','layouts_defaultviewsarticleemailhtml')"
     >
       <span class="tab-nav-text">layouts/_default/views/article.email.html</span>
     </button>
@@ -8593,13 +8744,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 <li>
 <p><em>Optional</em>: create a file <code>layouts/_default/_markup_/render-image.email.html</code></p>
 <p>In our case, we want t' convert each image into a base 64 encoded str'n t' display it inline 'n th' email without load'n external assets.</p>
-<div class="tab-panel" data-tab-group="854148d415eb988029bf233332fb01df">
+<div class="tab-panel" data-tab-group="b2a2ec08a195ea35d5c2d9e98f3e11fc">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layouts_defaultmarkuprender-imageemailhtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('854148d415eb988029bf233332fb01df','layouts_defaultmarkuprender-imageemailhtml')"
+      onclick="switchTab('b2a2ec08a195ea35d5c2d9e98f3e11fc','layouts_defaultmarkuprender-imageemailhtml')"
     >
       <span class="tab-nav-text">layouts/_default/<em>marrrkup</em>/render-image.email.html</span>
     </button>
@@ -8663,13 +8814,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 <p>Move yer files <code>layouts/partials/article.&lt;FORMAT&gt;.html</code> t' <code>layouts/_default/views/article.&lt;FORMAT&gt;.html</code></p>
 <p>Th' files will most likely require further modificat'ns as they now receive th' plank as it context (dot <code>.</code>) instead o' th' <code>.page</code> an' <code>.content</code> parameter.</p>
 <p><strong>Old</strong>:</p>
-<div class="tab-panel" data-tab-group="7e259da4a6f85b8dfe71ce84683ced30">
+<div class="tab-panel" data-tab-group="af059f86a757b41cfaff83595a089779">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialsarticleltformatgthtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('7e259da4a6f85b8dfe71ce84683ced30','layoutspartialsarticleltformatgthtml')"
+      onclick="switchTab('af059f86a757b41cfaff83595a089779','layoutspartialsarticleltformatgthtml')"
     >
       <span class="tab-nav-text">layouts/partials/article.&lt;FORMAT&gt;.html</span>
     </button>
@@ -8699,13 +8850,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
     </div>
   </div>
 </div><p><strong>New</strong>:</p>
-<div class="tab-panel" data-tab-group="4e004d7b134e6e1f094a7404712e71aa">
+<div class="tab-panel" data-tab-group="5de5fd0d112b3b190e57f359c86fba87">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layouts_defaultviewsarticleltformatgthtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('4e004d7b134e6e1f094a7404712e71aa','layouts_defaultviewsarticleltformatgthtml')"
+      onclick="switchTab('5de5fd0d112b3b190e57f359c86fba87','layouts_defaultviewsarticleltformatgthtml')"
     >
       <span class="tab-nav-text">layouts/_default/views/article.&lt;FORMAT&gt;.html</span>
     </button>
@@ -8737,13 +8888,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 <li>
 <p>Merge yer files <code>layouts/partials/header.&lt;FORMAT&gt;.html</code>, <code>layouts/partials/footer.&lt;FORMAT&gt;.html</code> t' <code>layouts/_default/baseof.&lt;FORMAT&gt;.html</code></p>
 <p><strong>Old</strong>:</p>
-<div class="tab-panel" data-tab-group="14cf1038514632cb2eaf49ca7413c3c8">
+<div class="tab-panel" data-tab-group="e0282ccd008b940d75624f3f4b31971f">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialsheaderltformatgthtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('14cf1038514632cb2eaf49ca7413c3c8','layoutspartialsheaderltformatgthtml')"
+      onclick="switchTab('e0282ccd008b940d75624f3f4b31971f','layoutspartialsheaderltformatgthtml')"
     >
       <span class="tab-nav-text">layouts/partials/header.&lt;FORMAT&gt;.html</span>
     </button>
@@ -8770,13 +8921,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
       </div>
     </div>
   </div>
-</div><div class="tab-panel" data-tab-group="a0db7ffcd293a46b029ade7bd4f54355">
+</div><div class="tab-panel" data-tab-group="a6dbcf3ddbcc93824a6836fb383a4165">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialsfooterltformatgthtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('a0db7ffcd293a46b029ade7bd4f54355','layoutspartialsfooterltformatgthtml')"
+      onclick="switchTab('a6dbcf3ddbcc93824a6836fb383a4165','layoutspartialsfooterltformatgthtml')"
     >
       <span class="tab-nav-text">layouts/partials/footer.&lt;FORMAT&gt;.html</span>
     </button>
@@ -8795,13 +8946,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 </div><p><strong>New</strong>:</p>
 <p>Th' upper part o' th' file be from yer <code>header.&lt;FORMAT&gt;.html</code> an' th' lower part be from yer <code>footer.&lt;FORMAT&gt;.html</code>.</p>
 <p>Th' marked line needs t' be added, so yer output format uses a potential <code>layouts/_default/views/article.&lt;FORMAT&gt;.html</code></p>
-<div class="tab-panel" data-tab-group="7fc2148d6f6973812f6ee206d06cbd99">
+<div class="tab-panel" data-tab-group="80e32cb69c4324a5e99147c43c56ae85">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layouts_defaultbaseofltformatgthtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('7fc2148d6f6973812f6ee206d06cbd99','layouts_defaultbaseofltformatgthtml')"
+      onclick="switchTab('80e32cb69c4324a5e99147c43c56ae85','layouts_defaultbaseofltformatgthtml')"
     >
       <span class="tab-nav-text">layouts/_default/baseof.&lt;FORMAT&gt;.html</span>
     </button>
@@ -9275,7 +9426,7 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 </span></span><span class="line"><span class="cl">    <span class="nx">name</span> <span class="p">=</span> <span class="s1">&#39;Sören Weber&#39;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">params</span><span class="p">.</span><span class="nx">boxStyle</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">color</span> <span class="p">=</span> <span class="s1">&#39;gold&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">color</span> <span class="p">=</span> <span class="s1">&#39;oklch(0.852 0.199 91.936)&#39;</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">i18n</span> <span class="p">=</span> <span class="s1">&#39;&#39;</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">ay'con</span> <span class="p">=</span> <span class="s1">&#39;rainbow&#39;</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">identifier</span> <span class="p">=</span> <span class="s1">&#39;magic&#39;</span>
@@ -9367,7 +9518,7 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">emailname</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Sören Weber</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">boxStyle</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l">gold</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l">oklch(0.852 0.199 91.936)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">i18n</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ay'con</span><span class="p">:</span><span class="w"> </span><span class="l">rainbow</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">magic</span><span class="w">
@@ -9497,7 +9648,7 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 </span></span><span class="line"><span class="cl">      <span class="p">},</span>
 </span></span><span class="line"><span class="cl">      <span class="nt">&#34;boxStyle&#34;</span><span class="p">:</span> <span class="p">[</span>
 </span></span><span class="line"><span class="cl">         <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;color&#34;</span><span class="p">:</span> <span class="s2">&#34;gold&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;color&#34;</span><span class="p">:</span> <span class="s2">&#34;oklch(0.852 0.199 91.936)&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&#34;i18n&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&#34;icon&#34;</span><span class="p">:</span> <span class="s2">&#34;rainbow&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&#34;identifier&#34;</span><span class="p">:</span> <span class="s2">&#34;magic&#34;</span><span class="p">,</span>
@@ -9656,13 +9807,13 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
   </div>
 </div>
 <h2 id="annotated-configuration-options">Annotated Configurat'n Opt'ns</h2>
-<div class="tab-panel" data-tab-group="e3b835354f04ec86c965bdc6261d8433">
+<div class="tab-panel" data-tab-group="360dd4db6addd692f0698972d5a754fa">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="hugotoml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('e3b835354f04ec86c965bdc6261d8433','hugotoml')"
+      onclick="switchTab('360dd4db6addd692f0698972d5a754fa','hugotoml')"
     >
       <span class="tab-nav-text">hugo.toml</span>
     </button>
@@ -10128,7 +10279,7 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
 </span></span><span class="line"><span class="cl"><span class="c"># that key. Th' `title` may be empty 'n which case, th' box does not contain a</span>
 </span></span><span class="line"><span class="cl"><span class="c"># default title. `icon` an' `color` be work'n similar.</span>
 </span></span><span class="line"><span class="cl"><span class="nx">boxStyle</span> <span class="p">=</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{</span> <span class="nx">identifier</span> <span class="p">=</span> <span class="s1">&#39;magic&#39;</span><span class="p">,</span> <span class="nx">i18n</span> <span class="p">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Magic&#39;</span><span class="p">,</span> <span class="nx">ay'con</span> <span class="p">=</span> <span class="s1">&#39;rainbow&#39;</span><span class="p">,</span> <span class="nx">color</span> <span class="p">=</span> <span class="s1">&#39;gold&#39;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span> <span class="nx">identifier</span> <span class="p">=</span> <span class="s1">&#39;magic&#39;</span><span class="p">,</span> <span class="nx">i18n</span> <span class="p">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Magic&#39;</span><span class="p">,</span> <span class="nx">ay'con</span> <span class="p">=</span> <span class="s1">&#39;rainbow&#39;</span><span class="p">,</span> <span class="nx">color</span> <span class="p">=</span> <span class="s1">&#39;oklch(0.852 0.199 91.936)&#39;</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">]</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c"># Hide th' authors name an' email addresses</span>
@@ -10403,22 +10554,22 @@ Th' <code>CODE-theme</code> parameter can be changed 'n th' generator but th' ch
         </div>
       </main>
     </div>
-    <script src="/hugo-theme-relearn/js/clipboard/clipboard.min.js?1742565043" defer></script>
-    <script src="/hugo-theme-relearn/js/perfect-scrollbar/perfect-scrollbar.min.js?1742565043" defer></script>
-    <script src="/hugo-theme-relearn/js/js-yaml/js-yaml.min.js?1742565043" defer></script>
-    <script src="/hugo-theme-relearn/js/d3/d3-color.min.js?1742565043" defer></script>
-    <script src="/hugo-theme-relearn/js/d3/d3-dispatch.min.js?1742565043" defer></script>
-    <script src="/hugo-theme-relearn/js/d3/d3-drag.min.js?1742565043" defer></script>
-    <script src="/hugo-theme-relearn/js/d3/d3-ease.min.js?1742565043" defer></script>
-    <script src="/hugo-theme-relearn/js/d3/d3-interpolate.min.js?1742565043" defer></script>
-    <script src="/hugo-theme-relearn/js/d3/d3-selection.min.js?1742565043" defer></script>
-    <script src="/hugo-theme-relearn/js/d3/d3-timer.min.js?1742565043" defer></script>
-    <script src="/hugo-theme-relearn/js/d3/d3-transition.min.js?1742565043" defer></script>
-    <script src="/hugo-theme-relearn/js/d3/d3-zoom.min.js?1742565043" defer></script>
-    <script src="/hugo-theme-relearn/js/mermaid/mermaid.min.js?1742565043" defer></script>
+    <script src="/hugo-theme-relearn/js/clipboard/clipboard.min.js?1742942864" defer></script>
+    <script src="/hugo-theme-relearn/js/perfect-scrollbar/perfect-scrollbar.min.js?1742942864" defer></script>
+    <script src="/hugo-theme-relearn/js/js-yaml/js-yaml.min.js?1742942864" defer></script>
+    <script src="/hugo-theme-relearn/js/d3/d3-color.min.js?1742942864" defer></script>
+    <script src="/hugo-theme-relearn/js/d3/d3-dispatch.min.js?1742942864" defer></script>
+    <script src="/hugo-theme-relearn/js/d3/d3-drag.min.js?1742942864" defer></script>
+    <script src="/hugo-theme-relearn/js/d3/d3-ease.min.js?1742942864" defer></script>
+    <script src="/hugo-theme-relearn/js/d3/d3-interpolate.min.js?1742942864" defer></script>
+    <script src="/hugo-theme-relearn/js/d3/d3-selection.min.js?1742942864" defer></script>
+    <script src="/hugo-theme-relearn/js/d3/d3-timer.min.js?1742942864" defer></script>
+    <script src="/hugo-theme-relearn/js/d3/d3-transition.min.js?1742942864" defer></script>
+    <script src="/hugo-theme-relearn/js/d3/d3-zoom.min.js?1742942864" defer></script>
+    <script src="/hugo-theme-relearn/js/mermaid/mermaid.min.js?1742942864" defer></script>
     <script>
       window.relearn.themeUseMermaid = JSON.parse("{ \"securityLevel\": \"loose\" }");
     </script>
-    <script src="/hugo-theme-relearn/js/theme.min.js?1742565043" defer></script>
+    <script src="/hugo-theme-relearn/js/theme.min.js?1742942864" defer></script>
   </body>
 </html>

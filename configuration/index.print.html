@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.145.0">
-    <meta name="generator" content="Relearn 7.5.0+e2a1704c3c230050d3777be3bae36285a7fa0d8e">
+    <meta name="generator" content="Relearn 7.6.0">
     <meta name="description" content="Find out how to configure and customize your site.
 Site ManagementGet yourself familiar with the general structure of your website">
     <meta name="author" content="Sören Weber">
@@ -33,18 +33,18 @@ Site ManagementGet yourself familiar with the general structure of your website"
     <link href="https://mcshelby.github.io/hugo-theme-relearn/pir/configuration/index.html" rel="alternate" hreflang="art-x-pir">
     <link href="https://mcshelby.github.io/hugo-theme-relearn/configuration/index.html" rel="canonical" type="text/html" title="Configuration :: Hugo Relearn Theme">
     <link href="/hugo-theme-relearn/configuration/index.xml" rel="alternate" type="application/rss+xml" title="Configuration :: Hugo Relearn Theme">
-    <link href="/hugo-theme-relearn/images/logo.svg?1742565037" rel="icon" type="image/svg+xml">
-    <link href="/hugo-theme-relearn/fonts/fontawesome/css/fontawesome-all.min.css?1742565037" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/fonts/fontawesome/css/fontawesome-all.min.css?1742565037" rel="stylesheet"></noscript>
-    <link href="/hugo-theme-relearn/css/perfect-scrollbar/perfect-scrollbar.min.css?1742565037" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/theme.min.css?1742565037" rel="stylesheet">
-    <link href="/hugo-theme-relearn/css/format-print.min.css?1742565037" rel="stylesheet" id="R-format-style">
-    <link href="/hugo-theme-relearn/css/auto-complete/auto-complete.min.css?1742565037" rel="stylesheet">
-    <script src="/hugo-theme-relearn/js/auto-complete/auto-complete.min.js?1742565037" defer></script>
-    <script src="/hugo-theme-relearn/js/lunr/lunr.min.js?1742565037" defer></script>
-    <script src="/hugo-theme-relearn/js/lunr/lunr.stemmer.support.min.js?1742565037" defer></script>
-    <script src="/hugo-theme-relearn/js/lunr/lunr.multi.min.js?1742565037" defer></script>
-    <script src="/hugo-theme-relearn/js/lunr/lunr.en.min.js?1742565037" defer></script>
-    <script src="/hugo-theme-relearn/js/search.min.js?1742565037" defer></script>
+    <link href="/hugo-theme-relearn/images/logo.svg?1742942858" rel="icon" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/fonts/fontawesome/css/fontawesome-all.min.css?1742942858" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/fonts/fontawesome/css/fontawesome-all.min.css?1742942858" rel="stylesheet"></noscript>
+    <link href="/hugo-theme-relearn/css/perfect-scrollbar/perfect-scrollbar.min.css?1742942858" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/theme.min.css?1742942858" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/format-print.min.css?1742942858" rel="stylesheet" id="R-format-style">
+    <link href="/hugo-theme-relearn/css/auto-complete/auto-complete.min.css?1742942858" rel="stylesheet">
+    <script src="/hugo-theme-relearn/js/auto-complete/auto-complete.min.js?1742942858" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.min.js?1742942858" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.stemmer.support.min.js?1742942858" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.multi.min.js?1742942858" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.en.min.js?1742942858" defer></script>
+    <script src="/hugo-theme-relearn/js/search.min.js?1742942858" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -54,17 +54,21 @@ Site ManagementGet yourself familiar with the general structure of your website"
       window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='https:\/\/mcshelby.github.io\/hugo-theme-relearn';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/hugo-theme-relearn/searchindex.en.js?1742565037";
+      window.relearn.index_js_url="/hugo-theme-relearn/searchindex.en.js?1742942858";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=true;
       window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
       // variant stuff
       window.relearn.themevariants = [ 'relearn-auto', 'relearn-dark', 'relearn-light', 'relearn-bright', 'zen-auto', 'zen-dark', 'zen-light', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ];
       window.relearn.customvariantname = "my-custom-variant";
       window.relearn.changeVariant = function(variant) {
         var oldVariant = document.documentElement.dataset.rThemeVariant;
-        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
         document.documentElement.dataset.rThemeVariant = variant;
         if (oldVariant != variant) {
           document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
@@ -72,15 +76,15 @@ Site ManagementGet yourself familiar with the general structure of your website"
         }
       }
       window.relearn.markVariant = function() {
-        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
         document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
       }
       window.relearn.initVariant = function() {
-        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
         if( variant == window.relearn.customvariantname ){
         }else if( !variant || !window.relearn.themevariants.includes(variant) ){
           variant = window.relearn.themevariants[0];
-          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
         }
         document.documentElement.dataset.rThemeVariant = variant;
       }
@@ -96,7 +100,7 @@ Site ManagementGet yourself familiar with the general structure of your website"
       window.T_No_results_found = `No results found for "{0}"`;
       window.T_N_results_found = `{1} results found for "{0}"`;
     </script>
-    <script src="/hugo-theme-relearn/js/variant.min.js?1742565037"></script>
+    <script src="/hugo-theme-relearn/js/variant.min.js?1742942858"></script>
     <style>
        
       #R-body img.bg-white {
@@ -225,6 +229,7 @@ Site ManagementGet yourself familiar with the general structure of your website"
   <h2 class="children-title" id="versioning"><a href="/hugo-theme-relearn/configuration/sitemanagement/versioning/index.html">Versioning</a></h2><p>How to keep older versions of your site</p>
   <h2 class="children-title" id="meta-information"><a href="/hugo-theme-relearn/configuration/sitemanagement/meta/index.html">Meta Information</a></h2><p>What site-wide meta information can be set</p>
   <h2 class="children-title" id="deployment-scenarios"><a href="/hugo-theme-relearn/configuration/sitemanagement/deployment/index.html">Deployment Scenarios</a></h2><p>Options for specific deployment needs</p>
+  <h2 class="children-title" id="stored-information"><a href="/hugo-theme-relearn/configuration/sitemanagement/storedinformation/index.html">Stored Information</a></h2><p>Information on what&#39;s stored on the reader&#39;s side</p>
   <h2 class="children-title" id="available-output-formats"><a href="/hugo-theme-relearn/configuration/sitemanagement/outputformats/index.html">Available Output Formats</a></h2><p>What formats can a page be displayed in</p>
   <h2 class="children-title" id="stable-output"><a href="/hugo-theme-relearn/configuration/sitemanagement/stableoutput/index.html">Stable Output</a></h2><p>How to make your generated HTML output stable</p>
 </div>
@@ -247,19 +252,35 @@ Site ManagementGet yourself familiar with the general structure of your website"
 <h1 id="directory-structure">Directory Structure</h1>
 
 <p>If you&rsquo;ve followed the <a href="/hugo-theme-relearn/introduction/quickstart/index.html">Getting Started</a> guide, your directory layout will look similar to this:</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">├── content
-</span></span><span class="line"><span class="cl">│   ├── log
-</span></span><span class="line"><span class="cl">│   │   ├── first-day
-</span></span><span class="line"><span class="cl">|   |   |   └── _index.md
-</span></span><span class="line"><span class="cl">│   │   ├── second-day
-</span></span><span class="line"><span class="cl">|   |   |   └── index.md
-</span></span><span class="line"><span class="cl">│   │   ├── third-day.md
-</span></span><span class="line"><span class="cl">│   │   └── _index.md
-</span></span><span class="line"><span class="cl">│   └── _index.md
-</span></span><span class="line"><span class="cl">├── themes
-</span></span><span class="line"><span class="cl">│   └── hugo-theme-relearn
-</span></span><span class="line"><span class="cl">│       └── ...
-</span></span><span class="line"><span class="cl">└── hugo.toml</span></span></code></pre></div>
+
+<div class="list-tree"><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>content</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>log</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>first-day</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>second-day</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>third-day.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>themes</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>hugo-theme-relearn</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>&hellip;</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-file-alt cstyle accent"></i><span>hugo.toml</span></li>
+</ul>
+</div>
 <p>Hugo uses a <a href="https://gohugo.io/getting-started/directory-structure/#union-file-system" rel="external" target="_self">union file system</a>, which lets you combine multiple directories.</p>
 <p>By default, it puts your root directory on top of the Relearn theme directory. Files in your root directory will replace theme files in the same location.</p>
 <p>For example, if you create a file at <code>layouts/partials/heading.html</code>, it will override the theme&rsquo;s <code>themes/hugo-theme-relearn/layouts/partials/heading.html</code>.</p>
@@ -430,24 +451,40 @@ Site ManagementGet yourself familiar with the general structure of your website"
 </li>
 <li>
 <p>Duplicate your content files and add language codes to their file names:</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">├── content
-</span></span><span class="line"><span class="cl">│   ├── log
-</span></span><span class="line"><span class="cl">│   │   ├── first-day
-</span></span><span class="line"><span class="cl">|   |   |   ├── _index.en.md
-</span></span><span class="line"><span class="cl">|   |   |   └── _index.pir.md
-</span></span><span class="line"><span class="cl">│   │   ├── second-day
-</span></span><span class="line"><span class="cl">|   |   |   ├── index.en.md
-</span></span><span class="line"><span class="cl">|   |   |   └── index.pir.md
-</span></span><span class="line"><span class="cl">│   │   ├── third-day.en.md
-</span></span><span class="line"><span class="cl">│   │   ├── third-day.pir.md
-</span></span><span class="line"><span class="cl">│   │   ├── _index.en.md
-</span></span><span class="line"><span class="cl">│   │   └── _index.pir.md
-</span></span><span class="line"><span class="cl">│   ├── _index.en.md
-</span></span><span class="line"><span class="cl">│   └── _index.pir.md
-</span></span><span class="line"><span class="cl">├── themes
-</span></span><span class="line"><span class="cl">│   └── hugo-theme-relearn
-</span></span><span class="line"><span class="cl">│       └── ...
-</span></span><span class="line"><span class="cl">└── hugo.toml</span></span></code></pre></div>
+
+<div class="list-tree"><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>content</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>log</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>first-day</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.en.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.pir.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>second-day</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>index.en.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>index.pir.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>third-day.en.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>third-day.pir.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.en.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.pir.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.en.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.pir.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>themes</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>hugo-theme-relearn</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>&hellip;</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-file-alt cstyle accent"></i><span>hugo.toml</span></li>
+</ul>
+</div>
 </li>
 </ol>
 <h2 id="translation-by-content-directory">Translation by Content Directory</h2>
@@ -556,29 +593,55 @@ Site ManagementGet yourself familiar with the general structure of your website"
 </li>
 <li>
 <p>Duplicate your content files into separate directories named by their language code:</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">├── content
-</span></span><span class="line"><span class="cl">│   ├── en
-</span></span><span class="line"><span class="cl">|   │   ├── log
-</span></span><span class="line"><span class="cl">|   │   │   ├── first-day
-</span></span><span class="line"><span class="cl">|   |   |   |   └── _index.md
-</span></span><span class="line"><span class="cl">|   │   │   ├── second-day
-</span></span><span class="line"><span class="cl">|   |   |   |   └── index.md
-</span></span><span class="line"><span class="cl">|   │   │   ├── third-day.md
-</span></span><span class="line"><span class="cl">|   │   │   └── _index.md
-</span></span><span class="line"><span class="cl">|   │   └── _index.md
-</span></span><span class="line"><span class="cl">│   ├── pir
-</span></span><span class="line"><span class="cl">|   │   ├── log
-</span></span><span class="line"><span class="cl">|   │   │   ├── first-day
-</span></span><span class="line"><span class="cl">|   |   |   |   └── _index.md
-</span></span><span class="line"><span class="cl">|   │   │   ├── second-day
-</span></span><span class="line"><span class="cl">|   |   |   |   └── index.md
-</span></span><span class="line"><span class="cl">|   │   │   ├── third-day.md
-</span></span><span class="line"><span class="cl">|   │   │   └── _index.md
-</span></span><span class="line"><span class="cl">|   │   └── _index.md
-</span></span><span class="line"><span class="cl">|   ├── themes
-</span></span><span class="line"><span class="cl">|   │   └── hugo-theme-relearn
-</span></span><span class="line"><span class="cl">|   │       └── ...
-</span></span><span class="line"><span class="cl">|   └── hugo.toml</span></span></code></pre></div>
+
+<div class="list-tree"><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>content</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>en</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>log</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>first-day</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>second-day</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>third-day.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>pir</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>log</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>first-day</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>second-day</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>third-day.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>themes</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>hugo-theme-relearn</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>&hellip;</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-file-alt cstyle accent"></i><span>hugo.toml</span></li>
+</ul>
+</div>
 </li>
 </ol>
 <h2 id="search-settings">Search Settings</h2>
@@ -938,7 +1001,7 @@ Site ManagementGet yourself familiar with the general structure of your website"
 <li><code>version</code> must be an <code>identifier</code> of one of the entries in the <code>versions</code> array</li>
 <li>you are not limited with the <code>baseURL</code>; these can be absolute or relative to your server root, can also reside in sub-subdirectories or be subdomains</li>
 <li>you can generate your archived versions into a sub-directory of the current version (as with this example)</li>
-<li>if you generate your archived versions into a sub-directory take care in your workflow not to delete old archived versions during release of the current version</li>
+<li>if you generate your archived versions into a sub-directory take care in your workflow not to delete older archived versions during build</li>
 <li>the example does not take version control systems into account (like git or subversion) as such a workflow is highly subjective</li>
 <li>both sites are completely independent autonomous Hugo sites; if you want to test this setup locally, you will need two running Hugo servers</li>
 <li>if you want to test this locally, you will need to adept the top level <code>baseURL</code> parameter as well as the <code>baseURL</code> parameter in the <code>versions</code> array to your local setup; best is to have <a href="https://gohugo.io/configuration/introduction/#configuration-directory" rel="external" target="_self">preconfigured environment configs</a> available</li>
@@ -1375,7 +1438,7 @@ Site ManagementGet yourself familiar with the general structure of your website"
   </div>
 </div>
 <h2 id="hiding-the-versioning-warning">Hiding the Versioning Warning</h2>
-<p><span class="badge cstyle cyan badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-gears"></i></span><span class="badge-content">Option</span></span> If visitors navigate to an old version of your site, they will see a versioning warning at the top of each page.</p>
+<p><span class="badge cstyle cyan badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-gears"></i></span><span class="badge-content">Option</span></span> If visitors navigate to an archived version of your site, they will see a versioning warning at the top of each page.</p>
 <p>You can disable it be setting the <code>disableVersioningWarning</code> option to <code>true</code> in your <code>hugo.toml</code>.</p>
 <div class="tab-panel" data-tab-group="config-code">
   <div class="tab-nav">
@@ -1434,7 +1497,7 @@ Site ManagementGet yourself familiar with the general structure of your website"
 </div>
 <h2 id="adjusting-the-versioning-warning">Adjusting the Versioning Warning</h2>
 <h3 id="method-1">Method 1</h3>
-<p>You can adjust the text of the version warning by overriding the key <code>Versioning-warning</code> in your i18n files.</p>
+<p>You can adjust the text of the versioning warning by overriding the key <code>Versioning-warning</code> in your i18n files.</p>
 <p>The following parameter are available to be included in the text:</p>
 <ul>
 <li><code>pageVersion</code> - the element of the displayed page&rsquo;s version from your <code>versions</code> array</li>
@@ -1983,6 +2046,45 @@ Site ManagementGet yourself familiar with the general structure of your website"
   <i class="fa-fw fas fa-layer-group"></i>
   <ul>
     <li><a class="term-link" href="/hugo-theme-relearn/categories/howto/index.html">Howto</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="stored-information">Stored Information</h1>
+
+<p>The theme will store information in the reader&rsquo;s browser. It is considered to fall under the exception clause in <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02002L0058-20091219#id-8b90d9c9-eb09-44f5-a58d-51d9cb3a50cd" rel="external" target="_self">DIRECTIVE 2002/58/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL, Art. 5(3)</a>.</p>
+<blockquote>
+<p>This shall not prevent any technical storage or access for the sole purpose of carrying out the transmission of a communication over an electronic communications network, or as strictly necessary in order for the provider of an information society service explicitly requested by the subscriber or user to provide the service.</p></blockquote>
+<p>The theme stores the following information in localstorage or sessionstorage.</p>
+<ul>
+<li>
+<p>Currently applicable search term to carry over to the following presented pages. This will be used to mark the search term in the page&rsquo;s text.</p>
+<p>This can be turned off by <a href="/hugo-theme-relearn/configuration/sidebar/search/index.html#configure-search">disabling search</a>.</p>
+</li>
+<li>
+<p><a href="/hugo-theme-relearn/shortcodes/tabs/index.html#behavior-of-the-groupid">Selected tab</a> of a tab group to apply the selection to other tab groups on the present page and all following presented pages.</p>
+<p>This can not be turned off.</p>
+</li>
+<li>
+<p>Visited pages to show a check mark in the menu if the page was previously visited.</p>
+<p>This can be turned off by <a href="/hugo-theme-relearn/configuration/sidebar/headerfooter/index.html#history">disabling the history</a>.</p>
+</li>
+<li>
+<p>The selected theme variant to carry over to the following presented pages.</p>
+<p>This can be turned off by only having <a href="/hugo-theme-relearn/configuration/branding/colors/index.html#single-variant">one theme variant configured</a>.</p>
+</li>
+</ul>
+<p>The theme is not responsible for stored information of third-party-scripts (every library stored in subdirectories of <code>assets/js/</code>).</p>
+
+  <footer class="footline">
+<div class="R-taxonomy taxonomy-categories cstyle" title="Categories" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/categories/explanation/index.html">Explanation</a></li>
   </ul>
 </div>
   </footer>
@@ -2702,13 +2804,13 @@ Site ManagementGet yourself familiar with the general structure of your website"
 <p>If you want to adjust your favicon according to your OS settings for light/dark mode, add the image files <code>assets/images/favicon-light.svg</code> and <code>assets/images/favicon-dark.svg</code> to your site&rsquo;s directory, respectively, corresponding to your file format. In case some of the files are missing, the theme falls back to <code>favicon.svg</code> for each missing file. All supplied favicons must be of the same file format.</p>
 <p>If no favicon file is found, the theme will look up the alternative filename <code>logo</code> in the same location and will repeat the search for the list of supported file types.</p>
 <p>If you need to change this default behavior, create a new file <code>layouts/partials/favicon.html</code> in your site&rsquo;s directory and write something like this:</p>
-<div class="tab-panel" data-tab-group="bd0967839477ba63b8fa92b64b69d021">
+<div class="tab-panel" data-tab-group="2cf51014150c25b159643e9e5b02e1a0">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialsfaviconhtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('bd0967839477ba63b8fa92b64b69d021','layoutspartialsfaviconhtml')"
+      onclick="switchTab('2cf51014150c25b159643e9e5b02e1a0','layoutspartialsfaviconhtml')"
     >
       <span class="tab-nav-text">layouts/partials/favicon.html</span>
     </button>
@@ -2738,13 +2840,13 @@ Site ManagementGet yourself familiar with the general structure of your website"
 </details>
 <h3 id="example">Example</h3>
 <p>Suppose you&rsquo;ve stored your logo as <code>static/images/logo.png</code> then your <code>layouts/partials/logo.html</code> could look something like this:</p>
-<div class="tab-panel" data-tab-group="5858204f361945ec2e30e2ec1e7fcb74">
+<div class="tab-panel" data-tab-group="fe193140e38afea7ad2c57f917665dd8">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialslogohtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('5858204f361945ec2e30e2ec1e7fcb74','layoutspartialslogohtml')"
+      onclick="switchTab('fe193140e38afea7ad2c57f917665dd8','layoutspartialslogohtml')"
     >
       <span class="tab-nav-text">layouts/partials/logo.html</span>
     </button>
@@ -2936,6 +3038,16 @@ Site ManagementGet yourself familiar with the general structure of your website"
 </div>
 <p>The first variant is the default, and a selector will appear if there&rsquo;s more than one.</p>
 <p>If you want to have more control, where the variant switcher is positioned or you want to configure a different icon, see the <a href="/hugo-theme-relearn/configuration/sidebar/menus/index.html#defining-sidebar-menus">chapter on sidebar configuration</a>.</p>
+
+<details open class=" box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Note
+  </summary>
+  <div class="box-content">
+<p>The selected theme variant will be <a href="/hugo-theme-relearn/configuration/sitemanagement/storedinformation/index.html">stored in the reader&rsquo;s browser</a>.</p>
+  </div>
+</details>
 <h4 id="adjust-to-os-settings">Adjust to OS Settings</h4>
 <p>Use the <code>auto</code> value to match OS light/dark settings. Usually it makes sense to set it in the first position and make it the default.</p>
 <div class="tab-panel" data-tab-group="config-code">
@@ -3387,13 +3499,13 @@ Site ManagementGet yourself familiar with the general structure of your website"
 <p>Create and import</p>
 <p>You can create a new variant file in the site&rsquo;s <code>assets/css</code> directory and give it a new name. Import the shipped variant, add the settings you want to change and save the new file. Afterwards, you can use it in your <code>hugo.toml</code> by the chosen name.</p>
 <p>For example, you want to use the <code>relearn-light</code> variant but want to change the syntax highlighting schema to the one used in the <code>neon</code> variant. For that, create a new <code>assets/css/theme-my-branding.css</code> in your site&rsquo;s directory and add the following lines:</p>
-<div class="tab-panel" data-tab-group="d0989d7b565b680a7a442b100858c62b">
+<div class="tab-panel" data-tab-group="aba6dcea5a7f441152e126717593d0ba">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="assetscsstheme-my-brandingcss"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('d0989d7b565b680a7a442b100858c62b','assetscsstheme-my-brandingcss')"
+      onclick="switchTab('aba6dcea5a7f441152e126717593d0ba','assetscsstheme-my-brandingcss')"
     >
       <span class="tab-nav-text">assets/css/theme-my-branding.css</span>
     </button>
@@ -3481,13 +3593,13 @@ Site ManagementGet yourself familiar with the general structure of your website"
 </ul>
 <h3 id="react-to-variant-switches-in-javascript">React to Variant Switches in JavaScript</h3>
 <p>Once a color variant is fully loaded, either initially or by switching the color variant manually with the variant selector, the custom event <code>themeVariantLoaded</code> on the <code>document</code> will be dispatched. You can add an event listener and react to changes.</p>
-<div class="tab-panel" data-tab-group="347c31f87c63da8bb15b4486c75d0530">
+<div class="tab-panel" data-tab-group="62351b9ff0b43e89f9c700551ce8fc4b">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="javascript"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('347c31f87c63da8bb15b4486c75d0530','javascript')"
+      onclick="switchTab('62351b9ff0b43e89f9c700551ce8fc4b','javascript')"
     >
       <span class="tab-nav-text">JavaScript</span>
     </button>
@@ -3584,13 +3696,13 @@ Site ManagementGet yourself familiar with the general structure of your website"
 <p>You can use one of the shipped stylesheet files or use Hugo to generate a file for you.</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo gen chromastyles --style<span class="o">=</span>monokai &gt; chroma-mycode.css</span></span></code></pre></div>
 <p>The file must be written to <code>assets/css/chroma-&lt;NAME&gt;.css</code>. To use it with your color variant, you have to modify <code>--CODE-theme: &lt;NAME&gt;</code> in the color variant stylesheet file.</p>
-<div class="tab-panel" data-tab-group="bf81e1e76c28ebb9d69f3ff3976f254b">
+<div class="tab-panel" data-tab-group="75746dd6bb98a8c38b85fa0c3c7b2fd8">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="assetscsstheme-my-brandingcss"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('bf81e1e76c28ebb9d69f3ff3976f254b','assetscsstheme-my-brandingcss')"
+      onclick="switchTab('75746dd6bb98a8c38b85fa0c3c7b2fd8','assetscsstheme-my-brandingcss')"
     >
       <span class="tab-nav-text">assets/css/theme-my-branding.css</span>
     </button>
@@ -3657,13 +3769,13 @@ Site ManagementGet yourself familiar with the general structure of your website"
 The <code>CODE-theme</code> parameter can be changed in the generator but the change will not be reflected dynamically in the page preview.
   </div>
 </details>
-<span class="btn cstyle interactive secondary"><button onclick="window.variants&amp;&amp;variants.getStylesheet();this.blur();" type="button"><i class="fa-fw fas fa-download"></i> <span class="title">Download variant</span></button></span>
-<span class="btn cstyle interactive warning"><button onclick="window.variants&amp;&amp;variants.resetVariant();this.blur();" type="button"><i class="fa-fw fas fa-trash"></i> <span class="title">Reset variant</span></button></span>
+<span class="btn interactive  cstyle secondary"><button onclick="window.variants&amp;&amp;variants.getStylesheet();this.blur();" type="button"><i class="fa-fw fas fa-download"></i> <span class="title">Download variant</span></button></span>
+<span class="btn interactive  cstyle warning"><button onclick="window.variants&amp;&amp;variants.resetVariant();this.blur();" type="button"><i class="fa-fw fas fa-trash"></i> <span class="title">Reset variant</span></button></span>
 <div id="R-vargenerator" class="mermaid zoomable" style="background-color: var(--INTERNAL-MAIN-TEXT-color);">
 	Graph
 </div>
-<span class="btn cstyle interactive secondary"><button onclick="window.variants&amp;&amp;variants.getStylesheet();this.blur();" type="button"><i class="fa-fw fas fa-download"></i> <span class="title">Download variant</span></button></span>
-<span class="btn cstyle interactive warning"><button onclick="window.variants&amp;&amp;variants.resetVariant();this.blur();" type="button"><i class="fa-fw fas fa-trash"></i> <span class="title">Reset variant</span></button></span>
+<span class="btn interactive  cstyle secondary"><button onclick="window.variants&amp;&amp;variants.getStylesheet();this.blur();" type="button"><i class="fa-fw fas fa-download"></i> <span class="title">Download variant</span></button></span>
+<span class="btn interactive  cstyle warning"><button onclick="window.variants&amp;&amp;variants.resetVariant();this.blur();" type="button"><i class="fa-fw fas fa-trash"></i> <span class="title">Reset variant</span></button></span>
 <script>
 	window.variants && variants.generator( '#R-vargenerator' );
 </script>
@@ -3740,13 +3852,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 </table>
 <p>You can change the menu width but not the screen width breakpoints.</p>
 <p>To adjust the menu width, use these CSS variables. Note that <code>--MENU-WIDTH-S</code> is for the mobile menu flyout on small screens.</p>
-<div class="tab-panel" data-tab-group="136d8f3a176cc6898d3432cdeeefe949">
+<div class="tab-panel" data-tab-group="c5eb0a79a757f0851376acacaf9c02cc">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialscustom-headerhtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('136d8f3a176cc6898d3432cdeeefe949','layoutspartialscustom-headerhtml')"
+      onclick="switchTab('c5eb0a79a757f0851376acacaf9c02cc','layoutspartialscustom-headerhtml')"
     >
       <span class="tab-nav-text">layouts/partials/custom-header.html</span>
     </button>
@@ -3841,8 +3953,8 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 </div>
 <h2 id="home-button-configuration">Home Button Configuration</h2>
 <p>By default, the theme displays a home button between search form and navigation menu. The Home button serves as an alternative to clicking the logo.</p>
-<p><a href="#R-image-60d38550184a9072c0bb917d8317a040" class="lightbox-link"><img alt="Default Home Button" class="bg-white border lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/configuration/sidebar/headerfooter/home_button_defaults.png?width=18.75rem" style=" height: auto; width: 18.75rem;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-60d38550184a9072c0bb917d8317a040"><img alt="Default Home Button" class="bg-white border lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/configuration/sidebar/headerfooter/home_button_defaults.png?width=18.75rem"></a></p>
+<p><a href="#R-image-c3ccf4a3369a6728a430b905bf48d845" class="lightbox-link"><img alt="Default Home Button" class="bg-white border lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/configuration/sidebar/headerfooter/home_button_defaults.png?width=18.75rem" style=" height: auto; width: 18.75rem;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c3ccf4a3369a6728a430b905bf48d845"><img alt="Default Home Button" class="bg-white border lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/configuration/sidebar/headerfooter/home_button_defaults.png?width=18.75rem"></a></p>
 <p><span class="badge cstyle cyan badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-gears"></i></span><span class="badge-content">Option</span></span> To hide the Home button on the left menu, set <code>disableLandingPageButton=true</code>.</p>
 <div class="tab-panel" data-tab-group="config-code">
   <div class="tab-nav">
@@ -4034,6 +4146,16 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 <p>For a free configuration of the header menus, see <a href="/hugo-theme-relearn/configuration/sidebar/menus/index.html#defining-sidebar-menus">configuration of the sidebar menus</a>.</p>
 <h2 id="history">History</h2>
 <p><span class="badge cstyle cyan badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-gears"></i></span><span class="badge-content">Option</span></span> Turn on <code>showVisitedLinks=true</code> to see checkmarks next to visited pages in the main menu. This also adds a history clearer button at the bottom of the menu to remove all checkmarks.</p>
+
+<details open class=" box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Note
+  </summary>
+  <div class="box-content">
+<p>The visited pages will be <a href="/hugo-theme-relearn/configuration/sitemanagement/storedinformation/index.html">stored in the reader&rsquo;s browser</a>.</p>
+  </div>
+</details>
 <p>If you want to have more control, where the history clearer is positioned or you want to configure a different icon, see the <a href="/hugo-theme-relearn/configuration/sidebar/menus/index.html#defining-sidebar-menus">chapter on sidebar configuration</a>.</p>
 <p>Note that checkmarks will disappear if you rebuild your site, as the page IDs may change.</p>
 <div class="tab-panel" data-tab-group="config-code">
@@ -4117,6 +4239,16 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 <li>Dedicated search page: Accessible by clicking the magnifier glass or pressing <kbd>ENTER</kbd></li>
 </ol>
 <p>Each level requires the previous one to be enabled. If no search is configured, the search form won&rsquo;t appear.</p>
+
+<details open class=" box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Note
+  </summary>
+  <div class="box-content">
+<p>The search term will be <a href="/hugo-theme-relearn/configuration/sitemanagement/storedinformation/index.html">stored in the reader&rsquo;s browser</a> as long as it is present.</p>
+  </div>
+</details>
 <p><span class="badge cstyle cyan badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-gears"></i></span><span class="badge-content">Option</span></span> All levels are enabled by default. Disable them in <code>hugo.toml</code>:</p>
 <ul>
 <li>In-page search: <code>disableSearch=true</code></li>
@@ -5055,13 +5187,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
   </div>
 </div>
 <p>To change the title, override your translation file.</p>
-<div class="tab-panel" data-tab-group="ad49cddab601b3446d25e4e9c15cc57d">
+<div class="tab-panel" data-tab-group="5f17606261de396a1cf048ca016248a3">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="i18nentoml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('ad49cddab601b3446d25e4e9c15cc57d','i18nentoml')"
+      onclick="switchTab('5f17606261de396a1cf048ca016248a3','i18nentoml')"
     >
       <span class="tab-nav-text">i18n/en.toml</span>
     </button>
@@ -5195,9 +5327,10 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 <ul>
 <li><code>sidebarheadermenus</code>:
 <ul>
+<li>a divider to separate from the logo (depending on the color configuration of the theme variant) if any of the following is configured</li>
 <li>a home button if <a href="/hugo-theme-relearn/configuration/sidebar/headerfooter/index.html#home-button-configuration">configured</a>, if you redefine this, use a Hugo menu and a <code>type=menu</code> to replicate this</li>
 <li>the version switcher if versioning is <a href="/hugo-theme-relearn/configuration/sitemanagement/versioning/index.html">configured</a></li>
-<li>a divider to separate from the <code>sidebarmenus</code> (depending on the configuration of the theme variant)</li>
+<li>a divider to separate from the <code>sidebarmenus</code> (depending on the color configuration of the theme variant)</li>
 </ul>
 </li>
 <li><code>sidebarmenus</code>:
@@ -5215,7 +5348,6 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 </ul>
 </li>
 </ul>
-<p>However, if you decide to overwrite these options, the configuration for those features will not be taken into account anymore. For example, if you want to reorder the <code>sidebarfootermenus</code> by setting</p>
 <div class="tab-panel" data-tab-group="config-code">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
@@ -5564,18 +5696,28 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 <p>When the user is on one of the log pages he should only see a page menu containing all log pages, while on one of the ship pages she should only see a page menu containing all sub pages of the ship section.</p>
 <p>For both sections, the default <code>shortcuts</code> Hugo menu should be displayed as if <a href="/hugo-theme-relearn/configuration/sidebar/menus/index.html#defining-sidebar-menus">defaults menus</a> were used.</p>
 <p>Directory structure:</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">content
-</span></span><span class="line"><span class="cl">├── log
-</span></span><span class="line"><span class="cl">│   ├── first-day.md
-</span></span><span class="line"><span class="cl">│   ├── second-day.md
-</span></span><span class="line"><span class="cl">│   ├── third-day.md
-</span></span><span class="line"><span class="cl">│   └── _index.md
-</span></span><span class="line"><span class="cl">├── ship
-</span></span><span class="line"><span class="cl">│   ├── cargo.md
-</span></span><span class="line"><span class="cl">│   ├── midst.md
-</span></span><span class="line"><span class="cl">│   ├── upper.md
-</span></span><span class="line"><span class="cl">│   └── _index.md
-</span></span><span class="line"><span class="cl">└── _index.md</span></span></code></pre></div>
+
+<div class="list-tree"><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>content</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>log</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>first-day.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>second-day.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>third-day.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>ship</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>cargo.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>midst.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>upper.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+</ul>
+</div>
 <p><span class="badge cstyle cyan badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-gears"></i></span><span class="badge-content">Option</span></span> <span class="badge cstyle green badge-with-title"><span class="badge-title"><i class="fa-fw fab fa-markdown"></i></span><span class="badge-content">Front Matter</span></span> Using <a href="https://gohugo.io/content-management/front-matter/#cascade" rel="external" target="_self">Hugo&rsquo;s cascade feature</a>, we can redefine the menus once in <code>log/_index.md</code> and <code>ship/_index.md</code> setting <code>sidebarmenus</code> so they will be used in all children pages.</p>
 <p>Setting the <code>sidebarmenus</code> Front Matter will overwrite all default menus. If you want to display the <code>shortcuts</code> Hugo menu as well like in this example, you have to declare it with the Front Matter as given in the <a href="/hugo-theme-relearn/configuration/sidebar/menus/index.html#defining-sidebar-menus">default options</a>.</p>
 <div class="tab-panel" data-tab-group="config-code">
@@ -5763,15 +5905,23 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 <h2 id="displaying-arbitrary-links-in-a-page-menu">Displaying Arbitrary Links in a Page Menu</h2>
 <p>You may have the need to add arbitrary links at some point in your menu that should redirect to other pages in your site structure. These are called crosslinks.</p>
 <p>Assume the following structure</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">content
-</span></span><span class="line"><span class="cl">├── log
-</span></span><span class="line"><span class="cl">│   ├── first-day.md
-</span></span><span class="line"><span class="cl">│   ├── second-day.md
-</span></span><span class="line"><span class="cl">│   ├── third-day.md
-</span></span><span class="line"><span class="cl">│   └── _index.md
-</span></span><span class="line"><span class="cl">├── burning-sail-incident.md
-</span></span><span class="line"><span class="cl">├── kraken-incident.md
-</span></span><span class="line"><span class="cl">└── _index.md</span></span></code></pre></div>
+
+<div class="list-tree"><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>content</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>log</span><ul>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>first-day.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>second-day.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>third-day.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>burning-sail-incident.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>kraken-incident.md</span></li>
+<li><i class="fa-fw fab fa-markdown cstyle secondary"></i><span>_index.md</span></li>
+</ul>
+</li>
+</ul>
+</div>
 <p>You now want to add a top level menu entry that points to <code>third-day</code> as separate <code>crows-nest-incident</code>.</p>
 <p>For that create a new page with the following front matter</p>
 <div class="tab-panel" data-tab-group="config-code">
@@ -6089,13 +6239,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 <h2 id="changing-the-main-areas-maximum-width">Changing the Main Area&rsquo;s Maximum Width</h2>
 <p>The main area has a default maximum width of <code>80.25rem</code> for better readability. If you want to change this, you can set a CSS variable</p>
 <p>For full width, use a large value like <code>1000rem</code>.</p>
-<div class="tab-panel" data-tab-group="dc27ee650c52aecec0fbe22b509ca865">
+<div class="tab-panel" data-tab-group="172503114530e2527167c6dd26bb05a5">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialscustom-headerhtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('dc27ee650c52aecec0fbe22b509ca865','layoutspartialscustom-headerhtml')"
+      onclick="switchTab('172503114530e2527167c6dd26bb05a5','layoutspartialscustom-headerhtml')"
     >
       <span class="tab-nav-text">layouts/partials/custom-header.html</span>
     </button>
@@ -7087,13 +7237,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 <ol>
 <li>
 <p>Create the shortcode file <code>layouts/shortcodes/myshortcode.html</code> and add the folloging line somewhere:</p>
-<div class="tab-panel" data-tab-group="a85db948f425366be69d4339d824f158">
+<div class="tab-panel" data-tab-group="918d416346b16475cbbff7ccfbb97eb9">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutsshortcodesmyshortcodehtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('a85db948f425366be69d4339d824f158','layoutsshortcodesmyshortcodehtml')"
+      onclick="switchTab('918d416346b16475cbbff7ccfbb97eb9','layoutsshortcodesmyshortcodehtml')"
     >
       <span class="tab-nav-text">layouts/shortcodes/myshortcode.html</span>
     </button>
@@ -7182,13 +7332,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 </li>
 <li>
 <p>Create loader file <code>layouts/partials/dependencies/myshortcode.html</code>:</p>
-<div class="tab-panel" data-tab-group="44f1ead44753d3feb714bd4a78c64a1a">
+<div class="tab-panel" data-tab-group="4ec750cf6f9f6c16d5db4a0dddfcbf46">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialsdependenciesmyshortcodehtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('44f1ead44753d3feb714bd4a78c64a1a','layoutspartialsdependenciesmyshortcodehtml')"
+      onclick="switchTab('4ec750cf6f9f6c16d5db4a0dddfcbf46','layoutspartialsdependenciesmyshortcodehtml')"
     >
       <span class="tab-nav-text">layouts/partials/dependencies/myshortcode.html</span>
     </button>
@@ -7436,13 +7586,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 </div>
 <h3 id="example">Example</h3>
 <p>With this configuration in effect, the following URL</p>
-<div class="tab-panel" data-tab-group="1a81f800ff5708a893fb0e844094b31f">
+<div class="tab-panel" data-tab-group="af5a52b767883b3ded77236d18bdd80b">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="markdown"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('1a81f800ff5708a893fb0e844094b31f','markdown')"
+      onclick="switchTab('af5a52b767883b3ded77236d18bdd80b','markdown')"
     >
       <span class="tab-nav-text">Markdown</span>
     </button>
@@ -7457,13 +7607,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
     </div>
   </div>
 </div><p>would result in</p>
-<div class="tab-panel" data-tab-group="0e0236f8847e101205143bd101474538">
+<div class="tab-panel" data-tab-group="1673a142770b641e8634e7f315911e7a">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="html"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('0e0236f8847e101205143bd101474538','html')"
+      onclick="switchTab('1673a142770b641e8634e7f315911e7a','html')"
     >
       <span class="tab-nav-text">HTML</span>
     </button>
@@ -7481,13 +7631,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 <p>If the resulting effect value is <code>true</code> a class with the effect&rsquo;s name will be added.</p>
 <p>Styles for default effects are contained in the theme. Add styles for your custom effects to <code>layouts/partials/content-header.html</code>.</p>
 <p>For the above custom effect you could add the following style:</p>
-<div class="tab-panel" data-tab-group="a38e4b5f2c81fc47dfb7bd6ae3977504">
+<div class="tab-panel" data-tab-group="50ff7ef210f7afcda569c1d705712ddf">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialscontent-headerhtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('a38e4b5f2c81fc47dfb7bd6ae3977504','layoutspartialscontent-headerhtml')"
+      onclick="switchTab('50ff7ef210f7afcda569c1d705712ddf','layoutspartialscontent-headerhtml')"
     >
       <span class="tab-nav-text">layouts/partials/content-header.html</span>
     </button>
@@ -7739,13 +7889,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 </div>
 <h3 id="example">Example</h3>
 <p>With this configuration in effect, the following URL</p>
-<div class="tab-panel" data-tab-group="4f1692d12960e1e3285cf0868ea80e0b">
+<div class="tab-panel" data-tab-group="97648b650d159aa6569c860daae92c3b">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="markdown"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('4f1692d12960e1e3285cf0868ea80e0b','markdown')"
+      onclick="switchTab('97648b650d159aa6569c860daae92c3b','markdown')"
     >
       <span class="tab-nav-text">Markdown</span>
     </button>
@@ -7760,13 +7910,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
     </div>
   </div>
 </div><p>would result in</p>
-<div class="tab-panel" data-tab-group="3f99ae787cd9ea65806d27def13588b2">
+<div class="tab-panel" data-tab-group="bb54860985782a06e0e0378a5f272885">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="html"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('3f99ae787cd9ea65806d27def13588b2','html')"
+      onclick="switchTab('bb54860985782a06e0e0378a5f272885','html')"
     >
       <span class="tab-nav-text">HTML</span>
     </button>
@@ -7784,13 +7934,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 <p>If the resulting effect value is <code>true</code> a class with the effect&rsquo;s name will be added.</p>
 <p>Styles for default effects are contained in the theme. Add styles for your custom effects to <code>layouts/partials/content-header.html</code>.</p>
 <p>For the above custom effect you could add the following style:</p>
-<div class="tab-panel" data-tab-group="196a2f94248cf10fc4fd5c981ffd560a">
+<div class="tab-panel" data-tab-group="c85257937e0b2d94a4abf0c624e4e572">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialscontent-headerhtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('196a2f94248cf10fc4fd5c981ffd560a','layoutspartialscontent-headerhtml')"
+      onclick="switchTab('c85257937e0b2d94a4abf0c624e4e572','layoutspartialscontent-headerhtml')"
     >
       <span class="tab-nav-text">layouts/partials/content-header.html</span>
     </button>
@@ -7826,8 +7976,8 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 <h1 id="topbar">Topbar</h1>
 
 <p>The theme comes with a reasonably configured topbar. You can learn how to <a href="/hugo-theme-relearn/authoring/frontmatter/topbar/index.html">configure the defaults in this section</a>.</p>
-<p><a href="#R-image-3dfd19ee72dc0bbf34bd5bca2cae966c" class="lightbox-link"><img alt="topbar on mobile devices" class="bg-white border lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/configuration/customization/topbar/topbar-closed.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3dfd19ee72dc0bbf34bd5bca2cae966c"><img alt="topbar on mobile devices" class="bg-white border lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/configuration/customization/topbar/topbar-closed.png"></a></p>
+<p><a href="#R-image-157baf6c68b3e51df2cf2feb9e1c06cd" class="lightbox-link"><img alt="topbar on mobile devices" class="bg-white border lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/configuration/customization/topbar/topbar-closed.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-157baf6c68b3e51df2cf2feb9e1c06cd"><img alt="topbar on mobile devices" class="bg-white border lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/configuration/customization/topbar/topbar-closed.png"></a></p>
 <p>Nevertheless, your requirements may differ from this configuration. Luckily, the theme has you covered as the topbar, its buttons, and the functionality behind these buttons are fully configurable by you.</p>
 
 <details open class=" box cstyle notices tip">
@@ -7841,8 +7991,8 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 </details>
 <h2 id="areas">Areas</h2>
 <p>The default configuration comes with three predefined areas that may contain an arbitrary set of buttons.</p>
-<p><a href="#R-image-329b7c01a81fb0c1ae5f2ba9ad2ca435" class="lightbox-link"><img alt="topbar with default areas marked" class="bg-white border lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/configuration/customization/topbar/topbar-areas.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-329b7c01a81fb0c1ae5f2ba9ad2ca435"><img alt="topbar with default areas marked" class="bg-white border lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/configuration/customization/topbar/topbar-areas.png"></a></p>
+<p><a href="#R-image-582abf71064c225a8c7c9c5c00b414ba" class="lightbox-link"><img alt="topbar with default areas marked" class="bg-white border lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/configuration/customization/topbar/topbar-areas.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-582abf71064c225a8c7c9c5c00b414ba"><img alt="topbar with default areas marked" class="bg-white border lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/configuration/customization/topbar/topbar-areas.png"></a></p>
 <ul>
 <li><a href="https://github.com/McShelby/hugo-theme-relearn/blob/main/layouts/partials/topbar/area/start.html" rel="external" target="_self"><strong>start</strong></a>: shown between menu and breadcrumb</li>
 <li><a href="https://github.com/McShelby/hugo-theme-relearn/blob/main/layouts/partials/topbar/area/end.html" rel="external" target="_self"><strong>end</strong></a>: shown on the opposite breadcrumb side in comparison to the <em>start</em> area</li>
@@ -8159,13 +8309,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 </li>
 <li>
 <p>Create a content view file at <code>layouts/releasenotes/views/article.html</code></p>
-<div class="tab-panel" data-tab-group="390d31db3054b2c13b678c9ab00a1b2f">
+<div class="tab-panel" data-tab-group="cbae90f5ab4d0da940877a11ccdae457">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutsreleasenotesviewsarticlehtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('390d31db3054b2c13b678c9ab00a1b2f','layoutsreleasenotesviewsarticlehtml')"
+      onclick="switchTab('cbae90f5ab4d0da940877a11ccdae457','layoutsreleasenotesviewsarticlehtml')"
     >
       <span class="tab-nav-text">layouts/releasenotes/views/article.html</span>
     </button>
@@ -8200,13 +8350,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 </li>
 <li>
 <p><em>Optional</em>: create an archetype file at <code>archetypes/releasenotes.md</code></p>
-<div class="tab-panel" data-tab-group="6d35ec84bf16845f25ad3b304ed2a420">
+<div class="tab-panel" data-tab-group="141b6b1e955582c8a995e504d24e3a42">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="archetypesreleasenotesmd"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('6d35ec84bf16845f25ad3b304ed2a420','archetypesreleasenotesmd')"
+      onclick="switchTab('141b6b1e955582c8a995e504d24e3a42','archetypesreleasenotesmd')"
     >
       <span class="tab-nav-text">archetypes/releasenotes.md</span>
     </button>
@@ -8228,13 +8378,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 </div></li>
 <li>
 <p><em>Optional</em>: add CSS in the file <code>layouts/partials/custom-header.html</code></p>
-<div class="tab-panel" data-tab-group="1c31dcbc3b25960794f9352d56f1c950">
+<div class="tab-panel" data-tab-group="74149e34975523c223ce3481d71ecf96">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialscustom-headerhtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('1c31dcbc3b25960794f9352d56f1c950','layoutspartialscustom-headerhtml')"
+      onclick="switchTab('74149e34975523c223ce3481d71ecf96','layoutspartialscustom-headerhtml')"
     >
       <span class="tab-nav-text">layouts/partials/custom-header.html</span>
     </button>
@@ -8282,13 +8432,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 <p>Move your files <code>layouts/partials/archetypes/&lt;DESIGN&gt;/article.html</code> to <code>layouts/&lt;DESIGN&gt;/views/article.html</code></p>
 <p>The files will most likely require further modifications as they now receive the page as it context (dot <code>.</code>) instead of the <code>.page</code> and <code>.content</code> parameter.</p>
 <p><strong>Old</strong>:</p>
-<div class="tab-panel" data-tab-group="6836717f523a57995a10425382865758">
+<div class="tab-panel" data-tab-group="a42061cf80d3050939e4f8e61704d32a">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialsarchetypesltdesigngtarticlehtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('6836717f523a57995a10425382865758','layoutspartialsarchetypesltdesigngtarticlehtml')"
+      onclick="switchTab('a42061cf80d3050939e4f8e61704d32a','layoutspartialsarchetypesltdesigngtarticlehtml')"
     >
       <span class="tab-nav-text">layouts/partials/archetypes/&lt;DESIGN&gt;/article.html</span>
     </button>
@@ -8318,13 +8468,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
     </div>
   </div>
 </div><p><strong>New</strong>:</p>
-<div class="tab-panel" data-tab-group="ebd3bc0c1e90ac2a82503e7677269263">
+<div class="tab-panel" data-tab-group="e46566bb9e877882f84369f60564f62d">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutsltdesigngtviewsarticlehtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('ebd3bc0c1e90ac2a82503e7677269263','layoutsltdesigngtviewsarticlehtml')"
+      onclick="switchTab('e46566bb9e877882f84369f60564f62d','layoutsltdesigngtviewsarticlehtml')"
     >
       <span class="tab-nav-text">layouts/&lt;DESIGN&gt;/views/article.html</span>
     </button>
@@ -8489,13 +8639,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 </li>
 <li>
 <p>Create a file <code>layouts/_default/baseof.email.html</code></p>
-<div class="tab-panel" data-tab-group="b3628bb40effbaab999550a089077aaa">
+<div class="tab-panel" data-tab-group="71054b3203f308cf9c67ff11300da9f2">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layouts_defaultbaseofemailhtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('b3628bb40effbaab999550a089077aaa','layouts_defaultbaseofemailhtml')"
+      onclick="switchTab('71054b3203f308cf9c67ff11300da9f2','layouts_defaultbaseofemailhtml')"
     >
       <span class="tab-nav-text">layouts/_default/baseof.email.html</span>
     </button>
@@ -8531,13 +8681,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 <li>
 <p><em>Optional</em>: create a file <code>layouts/_default/views/article.email.html</code></p>
 <p>In our case, we want to display a disclaimer in front of every article. To do this we have to define the output of an article ourself and rely on the above <code>block</code> statement to call our template.</p>
-<div class="tab-panel" data-tab-group="1c09deed1db84e111cebb8127d4497f2">
+<div class="tab-panel" data-tab-group="e940093cd26c15a4ac6c5c27893f012f">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layouts_defaultviewsarticleemailhtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('1c09deed1db84e111cebb8127d4497f2','layouts_defaultviewsarticleemailhtml')"
+      onclick="switchTab('e940093cd26c15a4ac6c5c27893f012f','layouts_defaultviewsarticleemailhtml')"
     >
       <span class="tab-nav-text">layouts/_default/views/article.email.html</span>
     </button>
@@ -8560,13 +8710,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 <li>
 <p><em>Optional</em>: create a file <code>layouts/_default/_markup_/render-image.email.html</code></p>
 <p>In our case, we want to convert each image into a base 64 encoded string to display it inline in the email without loading external assets.</p>
-<div class="tab-panel" data-tab-group="854148d415eb988029bf233332fb01df">
+<div class="tab-panel" data-tab-group="b2a2ec08a195ea35d5c2d9e98f3e11fc">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layouts_defaultmarkuprender-imageemailhtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('854148d415eb988029bf233332fb01df','layouts_defaultmarkuprender-imageemailhtml')"
+      onclick="switchTab('b2a2ec08a195ea35d5c2d9e98f3e11fc','layouts_defaultmarkuprender-imageemailhtml')"
     >
       <span class="tab-nav-text">layouts/_default/<em>markup</em>/render-image.email.html</span>
     </button>
@@ -8630,13 +8780,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 <p>Move your files <code>layouts/partials/article.&lt;FORMAT&gt;.html</code> to <code>layouts/_default/views/article.&lt;FORMAT&gt;.html</code></p>
 <p>The files will most likely require further modifications as they now receive the page as it context (dot <code>.</code>) instead of the <code>.page</code> and <code>.content</code> parameter.</p>
 <p><strong>Old</strong>:</p>
-<div class="tab-panel" data-tab-group="7e259da4a6f85b8dfe71ce84683ced30">
+<div class="tab-panel" data-tab-group="af059f86a757b41cfaff83595a089779">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialsarticleltformatgthtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('7e259da4a6f85b8dfe71ce84683ced30','layoutspartialsarticleltformatgthtml')"
+      onclick="switchTab('af059f86a757b41cfaff83595a089779','layoutspartialsarticleltformatgthtml')"
     >
       <span class="tab-nav-text">layouts/partials/article.&lt;FORMAT&gt;.html</span>
     </button>
@@ -8666,13 +8816,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
     </div>
   </div>
 </div><p><strong>New</strong>:</p>
-<div class="tab-panel" data-tab-group="4e004d7b134e6e1f094a7404712e71aa">
+<div class="tab-panel" data-tab-group="5de5fd0d112b3b190e57f359c86fba87">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layouts_defaultviewsarticleltformatgthtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('4e004d7b134e6e1f094a7404712e71aa','layouts_defaultviewsarticleltformatgthtml')"
+      onclick="switchTab('5de5fd0d112b3b190e57f359c86fba87','layouts_defaultviewsarticleltformatgthtml')"
     >
       <span class="tab-nav-text">layouts/_default/views/article.&lt;FORMAT&gt;.html</span>
     </button>
@@ -8704,13 +8854,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 <li>
 <p>Merge your files <code>layouts/partials/header.&lt;FORMAT&gt;.html</code>, <code>layouts/partials/footer.&lt;FORMAT&gt;.html</code> to <code>layouts/_default/baseof.&lt;FORMAT&gt;.html</code></p>
 <p><strong>Old</strong>:</p>
-<div class="tab-panel" data-tab-group="14cf1038514632cb2eaf49ca7413c3c8">
+<div class="tab-panel" data-tab-group="e0282ccd008b940d75624f3f4b31971f">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialsheaderltformatgthtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('14cf1038514632cb2eaf49ca7413c3c8','layoutspartialsheaderltformatgthtml')"
+      onclick="switchTab('e0282ccd008b940d75624f3f4b31971f','layoutspartialsheaderltformatgthtml')"
     >
       <span class="tab-nav-text">layouts/partials/header.&lt;FORMAT&gt;.html</span>
     </button>
@@ -8737,13 +8887,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
       </div>
     </div>
   </div>
-</div><div class="tab-panel" data-tab-group="a0db7ffcd293a46b029ade7bd4f54355">
+</div><div class="tab-panel" data-tab-group="a6dbcf3ddbcc93824a6836fb383a4165">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layoutspartialsfooterltformatgthtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('a0db7ffcd293a46b029ade7bd4f54355','layoutspartialsfooterltformatgthtml')"
+      onclick="switchTab('a6dbcf3ddbcc93824a6836fb383a4165','layoutspartialsfooterltformatgthtml')"
     >
       <span class="tab-nav-text">layouts/partials/footer.&lt;FORMAT&gt;.html</span>
     </button>
@@ -8762,13 +8912,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 </div><p><strong>New</strong>:</p>
 <p>The upper part of the file is from your <code>header.&lt;FORMAT&gt;.html</code> and the lower part is from your <code>footer.&lt;FORMAT&gt;.html</code>.</p>
 <p>The marked line needs to be added, so your output format uses a potential <code>layouts/_default/views/article.&lt;FORMAT&gt;.html</code></p>
-<div class="tab-panel" data-tab-group="7fc2148d6f6973812f6ee206d06cbd99">
+<div class="tab-panel" data-tab-group="80e32cb69c4324a5e99147c43c56ae85">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="layouts_defaultbaseofltformatgthtml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('7fc2148d6f6973812f6ee206d06cbd99','layouts_defaultbaseofltformatgthtml')"
+      onclick="switchTab('80e32cb69c4324a5e99147c43c56ae85','layouts_defaultbaseofltformatgthtml')"
     >
       <span class="tab-nav-text">layouts/_default/baseof.&lt;FORMAT&gt;.html</span>
     </button>
@@ -9240,7 +9390,7 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 </span></span><span class="line"><span class="cl">    <span class="nx">name</span> <span class="p">=</span> <span class="s1">&#39;Sören Weber&#39;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">[[</span><span class="nx">params</span><span class="p">.</span><span class="nx">boxStyle</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">color</span> <span class="p">=</span> <span class="s1">&#39;gold&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">color</span> <span class="p">=</span> <span class="s1">&#39;oklch(0.852 0.199 91.936)&#39;</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">i18n</span> <span class="p">=</span> <span class="s1">&#39;&#39;</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">icon</span> <span class="p">=</span> <span class="s1">&#39;rainbow&#39;</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">identifier</span> <span class="p">=</span> <span class="s1">&#39;magic&#39;</span>
@@ -9332,7 +9482,7 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">emailname</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Sören Weber</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">boxStyle</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l">gold</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">color</span><span class="p">:</span><span class="w"> </span><span class="l">oklch(0.852 0.199 91.936)</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">i18n</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l">rainbow</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l">magic</span><span class="w">
@@ -9462,7 +9612,7 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 </span></span><span class="line"><span class="cl">      <span class="p">},</span>
 </span></span><span class="line"><span class="cl">      <span class="nt">&#34;boxStyle&#34;</span><span class="p">:</span> <span class="p">[</span>
 </span></span><span class="line"><span class="cl">         <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;color&#34;</span><span class="p">:</span> <span class="s2">&#34;gold&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;color&#34;</span><span class="p">:</span> <span class="s2">&#34;oklch(0.852 0.199 91.936)&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&#34;i18n&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&#34;icon&#34;</span><span class="p">:</span> <span class="s2">&#34;rainbow&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="nt">&#34;identifier&#34;</span><span class="p">:</span> <span class="s2">&#34;magic&#34;</span><span class="p">,</span>
@@ -9621,13 +9771,13 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
   </div>
 </div>
 <h2 id="annotated-configuration-options">Annotated Configuration Options</h2>
-<div class="tab-panel" data-tab-group="e3b835354f04ec86c965bdc6261d8433">
+<div class="tab-panel" data-tab-group="360dd4db6addd692f0698972d5a754fa">
   <div class="tab-nav">
     <div class="tab-nav-title">&#8203;</div>
     <button
       data-tab-item="hugotoml"
       class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
-      onclick="switchTab('e3b835354f04ec86c965bdc6261d8433','hugotoml')"
+      onclick="switchTab('360dd4db6addd692f0698972d5a754fa','hugotoml')"
     >
       <span class="tab-nav-text">hugo.toml</span>
     </button>
@@ -10093,7 +10243,7 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
 </span></span><span class="line"><span class="cl"><span class="c"># that key. The `title` may be empty in which case, the box does not contain a</span>
 </span></span><span class="line"><span class="cl"><span class="c"># default title. `icon` and `color` are working similar.</span>
 </span></span><span class="line"><span class="cl"><span class="nx">boxStyle</span> <span class="p">=</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">	<span class="p">{</span> <span class="nx">identifier</span> <span class="p">=</span> <span class="s1">&#39;magic&#39;</span><span class="p">,</span> <span class="nx">i18n</span> <span class="p">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Magic&#39;</span><span class="p">,</span> <span class="nx">icon</span> <span class="p">=</span> <span class="s1">&#39;rainbow&#39;</span><span class="p">,</span> <span class="nx">color</span> <span class="p">=</span> <span class="s1">&#39;gold&#39;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span> <span class="nx">identifier</span> <span class="p">=</span> <span class="s1">&#39;magic&#39;</span><span class="p">,</span> <span class="nx">i18n</span> <span class="p">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Magic&#39;</span><span class="p">,</span> <span class="nx">icon</span> <span class="p">=</span> <span class="s1">&#39;rainbow&#39;</span><span class="p">,</span> <span class="nx">color</span> <span class="p">=</span> <span class="s1">&#39;oklch(0.852 0.199 91.936)&#39;</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">]</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c"># Hide the authors name and email addresses</span>
@@ -10367,22 +10517,22 @@ The <code>CODE-theme</code> parameter can be changed in the generator but the ch
         </div>
       </main>
     </div>
-    <script src="/hugo-theme-relearn/js/clipboard/clipboard.min.js?1742565037" defer></script>
-    <script src="/hugo-theme-relearn/js/perfect-scrollbar/perfect-scrollbar.min.js?1742565037" defer></script>
-    <script src="/hugo-theme-relearn/js/js-yaml/js-yaml.min.js?1742565037" defer></script>
-    <script src="/hugo-theme-relearn/js/d3/d3-color.min.js?1742565037" defer></script>
-    <script src="/hugo-theme-relearn/js/d3/d3-dispatch.min.js?1742565037" defer></script>
-    <script src="/hugo-theme-relearn/js/d3/d3-drag.min.js?1742565037" defer></script>
-    <script src="/hugo-theme-relearn/js/d3/d3-ease.min.js?1742565037" defer></script>
-    <script src="/hugo-theme-relearn/js/d3/d3-interpolate.min.js?1742565037" defer></script>
-    <script src="/hugo-theme-relearn/js/d3/d3-selection.min.js?1742565037" defer></script>
-    <script src="/hugo-theme-relearn/js/d3/d3-timer.min.js?1742565037" defer></script>
-    <script src="/hugo-theme-relearn/js/d3/d3-transition.min.js?1742565037" defer></script>
-    <script src="/hugo-theme-relearn/js/d3/d3-zoom.min.js?1742565037" defer></script>
-    <script src="/hugo-theme-relearn/js/mermaid/mermaid.min.js?1742565037" defer></script>
+    <script src="/hugo-theme-relearn/js/clipboard/clipboard.min.js?1742942858" defer></script>
+    <script src="/hugo-theme-relearn/js/perfect-scrollbar/perfect-scrollbar.min.js?1742942858" defer></script>
+    <script src="/hugo-theme-relearn/js/js-yaml/js-yaml.min.js?1742942858" defer></script>
+    <script src="/hugo-theme-relearn/js/d3/d3-color.min.js?1742942858" defer></script>
+    <script src="/hugo-theme-relearn/js/d3/d3-dispatch.min.js?1742942858" defer></script>
+    <script src="/hugo-theme-relearn/js/d3/d3-drag.min.js?1742942858" defer></script>
+    <script src="/hugo-theme-relearn/js/d3/d3-ease.min.js?1742942858" defer></script>
+    <script src="/hugo-theme-relearn/js/d3/d3-interpolate.min.js?1742942858" defer></script>
+    <script src="/hugo-theme-relearn/js/d3/d3-selection.min.js?1742942858" defer></script>
+    <script src="/hugo-theme-relearn/js/d3/d3-timer.min.js?1742942858" defer></script>
+    <script src="/hugo-theme-relearn/js/d3/d3-transition.min.js?1742942858" defer></script>
+    <script src="/hugo-theme-relearn/js/d3/d3-zoom.min.js?1742942858" defer></script>
+    <script src="/hugo-theme-relearn/js/mermaid/mermaid.min.js?1742942858" defer></script>
     <script>
       window.relearn.themeUseMermaid = JSON.parse("{ \"securityLevel\": \"loose\" }");
     </script>
-    <script src="/hugo-theme-relearn/js/theme.min.js?1742565037" defer></script>
+    <script src="/hugo-theme-relearn/js/theme.min.js?1742942858" defer></script>
   </body>
 </html>
